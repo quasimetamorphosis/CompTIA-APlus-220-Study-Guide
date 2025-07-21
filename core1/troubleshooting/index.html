@@ -1,0 +1,1872 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../virtualization/">
+      
+      
+        <link rel="next" href="../../core2/1.0-operating-systems-overview/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>5.0 Troubleshooting - CompTIA A+ Study Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-button.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#50-hardware-and-network-troubleshooting-28-of-core-1-exam" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CompTIA A+ Study Guide" class="md-header__button md-logo" aria-label="CompTIA A+ Study Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CompTIA A+ Study Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5.0 Troubleshooting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.55 19.09 1.41 1.41 1.8-1.79-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71 1.8 1.79 1.41-1.41-1.79-1.8M20.45 5l-1.41-1.4-1.8 1.79 1.42 1.42M13 1h-2v3h2M6.76 5.39 4.96 3.6 3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-objectives/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exam Objectives
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1.0-mobile-devices/" class="md-tabs__link">
+          
+  
+  
+  Core 1
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../core2/1.0-operating-systems-overview/" class="md-tabs__link">
+          
+  
+  
+  Core 2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CompTIA A+ Study Guide" class="md-nav__button md-logo" aria-label="CompTIA A+ Study Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CompTIA A+ Study Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam Objectives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    1.0 Mobile Devices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            1.0 Mobile Devices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.1-laptop-hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Laptop Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.2-connecting-mobile-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connecting Devices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.2-mobile-device-accessories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.3-mobile-device-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobile Device Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.3-mobile-device-networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobile Networks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Networking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0 Virtualization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    5.0 Troubleshooting
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.0 Troubleshooting
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51-motherboard-ram-cpu-and-power-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Motherboard, RAM, CPU, and Power Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Motherboard, RAM, CPU, and Power Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-symptoms-and-likely-causes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Symptoms and Likely Causes:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Symptoms and Likely Causes:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boot-and-power-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boot and Power Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-and-stability-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance and Stability Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-and-environmental-signs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physical and Environmental Signs:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting Approach:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-storage-and-raid-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Storage and RAID Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Storage and RAID Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-storage-symptoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Storage Symptoms:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Storage Symptoms:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Indicators:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-symptoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failure Symptoms:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raid-specific-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAID-Specific Issues:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-storage-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting Storage Issues:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-video-projector-and-display-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Video, Projector, and Display Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Video, Projector, and Display Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-display-symptoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Display Symptoms:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Display Symptoms:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Problems:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Failures:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-quality-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image Quality Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projector-specific-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projector-Specific Issues:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-troubleshooting-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Troubleshooting Steps:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-mobile-device-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Mobile Device Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 Mobile Device Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-mobile-device-symptoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Mobile Device Symptoms:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Mobile Device Symptoms:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-and-battery-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power and Battery Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physical Damage:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-and-software-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance and Software Issues:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-device-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Device Troubleshooting:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-network-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Network Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5 Network Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-network-symptoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Network Symptoms:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Network Symptoms:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connectivity-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connectivity Problems:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-quality-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Quality Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure Problems:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-troubleshooting-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Troubleshooting Methodology:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-troubleshooting-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Troubleshooting Tools:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-printer-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 Printer Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6 Printer Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-printer-symptoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Printer Symptoms:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Printer Symptoms:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#print-quality-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Print Quality Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paper-handling-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paper Handling Problems:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-and-queue-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      System and Queue Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mechanical-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mechanical Problems:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printer-troubleshooting-by-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printer Troubleshooting by Type:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Printer Troubleshooting by Type:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#laser-printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Laser Printers:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inkjet-printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inkjet Printers:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thermal-printers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thermal Printers:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comptia-troubleshooting-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      CompTIA Troubleshooting Methodology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CompTIA Troubleshooting Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-6-step-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 6-Step Process:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-tips-for-troubleshooting-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Study Tips for Troubleshooting Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Study Tips for Troubleshooting Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-priority-symptoms-to-memorize" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Priority Symptoms to Memorize:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting Strategy:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-exam-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Exam Scenarios:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-and-commands-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools and Commands to Know:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-safety-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Safety Considerations:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Core 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core2/1.0-operating-systems-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 Operating Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core2/2.0-security-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core2/3.0-software-troubleshooting-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Software Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="50-hardware-and-network-troubleshooting-28-of-core-1-exam">5.0 Hardware and Network Troubleshooting (28% of Core 1 Exam)<a class="headerlink" href="#50-hardware-and-network-troubleshooting-28-of-core-1-exam" title="Permanent link">&para;</a></h1>
+<p><em>Focus: Systematic troubleshooting of motherboards, RAM, CPUs, power, storage, displays, mobile devices, networks, and printers using proper methodology</em></p>
+<hr />
+<h2 id="51-motherboard-ram-cpu-and-power-issues">5.1 Motherboard, RAM, CPU, and Power Issues<a class="headerlink" href="#51-motherboard-ram-cpu-and-power-issues" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll diagnose hardware failures using symptoms and apply the troubleshooting methodology to identify root causes and solutions.</p>
+<h3 id="common-symptoms-and-likely-causes">Common Symptoms and Likely Causes:<a class="headerlink" href="#common-symptoms-and-likely-causes" title="Permanent link">&para;</a></h3>
+<h4 id="boot-and-power-issues">Boot and Power Issues:<a class="headerlink" href="#boot-and-power-issues" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>POST Beeps</strong> - Hardware failure detected during Power-On Self-Test<ul>
+<li>Single beep: Normal boot</li>
+<li>Continuous beeps: Power supply or motherboard failure</li>
+<li>Pattern beeps: RAM, CPU, or graphics card issues</li>
+</ul>
+</li>
+<li><strong>Proprietary Crash Screens</strong> - Blue Screen of Death (BSOD), kernel panics</li>
+<li><strong>Blank Screen</strong> - No video output despite power</li>
+<li><strong>No Power</strong> - System won't turn on at all</li>
+</ul>
+<h4 id="performance-and-stability-issues">Performance and Stability Issues:<a class="headerlink" href="#performance-and-stability-issues" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Sluggish Performance</strong> - Slow system response<ul>
+<li>Insufficient RAM, overheating CPU, failing storage</li>
+</ul>
+</li>
+<li><strong>Overheating</strong> - System runs hot, thermal throttling</li>
+<li><strong>Random Shutdown</strong> - Unexpected system power-offs</li>
+<li><strong>Application Crashes</strong> - Software unexpectedly closes</li>
+</ul>
+<h4 id="physical-and-environmental-signs">Physical and Environmental Signs:<a class="headerlink" href="#physical-and-environmental-signs" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Burning Smell</strong> - Electrical component failure (immediate shutdown required)</li>
+<li><strong>Unusual Noise</strong> - Fan failure, hard drive clicking</li>
+<li><strong>Capacitor Swelling</strong> - Motherboard component failure</li>
+<li><strong>Inaccurate System Date/Time</strong> - CMOS battery failure</li>
+</ul>
+<h3 id="troubleshooting-approach">Troubleshooting Approach:<a class="headerlink" href="#troubleshooting-approach" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Safety First</strong> - Power down for burning smells</li>
+<li><strong>Check Connections</strong> - Reseat RAM, cables, expansion cards</li>
+<li><strong>Test Components</strong> - Swap RAM modules, test PSU</li>
+<li><strong>Monitor Temperatures</strong> - Check CPU and system temps</li>
+<li><strong>Update BIOS/Drivers</strong> - Resolve compatibility issues</li>
+</ol>
+<p><em>Key Study Point: POST beep patterns indicate specific hardware failures. Always check power connections and temperatures first, then move to component-level troubleshooting.</em></p>
+<hr />
+<h2 id="52-storage-and-raid-issues">5.2 Storage and RAID Issues<a class="headerlink" href="#52-storage-and-raid-issues" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll identify storage failures through symptoms and understand RAID array troubleshooting procedures.</p>
+<h3 id="common-storage-symptoms">Common Storage Symptoms:<a class="headerlink" href="#common-storage-symptoms" title="Permanent link">&para;</a></h3>
+<h4 id="performance-indicators">Performance Indicators:<a class="headerlink" href="#performance-indicators" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>LED Status Indicators</strong> - Drive health lights on servers/arrays</li>
+<li><strong>Extended Read/Write Times</strong> - Slow file operations</li>
+<li><strong>Low Performance IOPS</strong> - Input/Output Operations Per Second degradation</li>
+</ul>
+<h4 id="failure-symptoms">Failure Symptoms:<a class="headerlink" href="#failure-symptoms" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Grinding Noises</strong> - Mechanical hard drive bearing failure</li>
+<li><strong>Clicking Sounds</strong> - Hard drive head crash (immediate backup needed)</li>
+<li><strong>Bootable Device Not Found</strong> - Boot drive failure or corruption</li>
+<li><strong>Data Loss/Corruption</strong> - Files missing or damaged</li>
+<li><strong>Missing Drives in OS</strong> - Drive not detected by operating system</li>
+</ul>
+<h4 id="raid-specific-issues">RAID-Specific Issues:<a class="headerlink" href="#raid-specific-issues" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>RAID Failure</strong> - Array degraded or failed</li>
+<li><strong>Array Missing</strong> - RAID configuration lost</li>
+<li><strong>S.M.A.R.T. Failure</strong> - Self-Monitoring Analysis and Reporting Technology alerts</li>
+<li><strong>Audible Alarms</strong> - Server/NAS alerting to drive failures</li>
+</ul>
+<h3 id="troubleshooting-storage-issues">Troubleshooting Storage Issues:<a class="headerlink" href="#troubleshooting-storage-issues" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Check S.M.A.R.T. Status</strong> - Review drive health metrics</li>
+<li><strong>Verify Connections</strong> - SATA/power cables secure</li>
+<li><strong>Test in Another System</strong> - Isolate drive vs system issues</li>
+<li><strong>Check RAID Status</strong> - Verify array health and configuration</li>
+<li><strong>Replace Failed Drives</strong> - Hot-swap if supported</li>
+<li><strong>Restore from Backup</strong> - Last resort for data recovery</li>
+</ol>
+<p><em>Key Study Point: Clicking sounds from drives indicate imminent failure - immediate backup required. S.M.A.R.T. warnings should be taken seriously as predictive failure indicators.</em></p>
+<hr />
+<h2 id="53-video-projector-and-display-issues">5.3 Video, Projector, and Display Issues<a class="headerlink" href="#53-video-projector-and-display-issues" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll distinguish between display hardware problems and configuration issues while applying appropriate solutions.</p>
+<h3 id="common-display-symptoms">Common Display Symptoms:<a class="headerlink" href="#common-display-symptoms" title="Permanent link">&para;</a></h3>
+<h4 id="configuration-problems">Configuration Problems:<a class="headerlink" href="#configuration-problems" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Incorrect Input Source</strong> - Wrong input selected on display</li>
+<li><strong>Sizing Issues</strong> - Display not fitting screen properly</li>
+<li><strong>Incorrect Color Display</strong> - Wrong color profile or damaged cable</li>
+</ul>
+<h4 id="hardware-failures">Hardware Failures:<a class="headerlink" href="#hardware-failures" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Physical Cabling Issues</strong> - Loose, damaged, or wrong cable type</li>
+<li><strong>Burnt-out Bulb</strong> - Projector lamp failure</li>
+<li><strong>Dead Pixels</strong> - Permanently black or colored pixels on LCD</li>
+<li><strong>Display Burn-in</strong> - Permanent image ghosting (OLED/plasma)</li>
+</ul>
+<h4 id="image-quality-issues">Image Quality Issues:<a class="headerlink" href="#image-quality-issues" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Fuzzy Image</strong> - Poor focus, wrong resolution, or analog interference</li>
+<li><strong>Flashing Screen</strong> - Unstable connection or failing backlight</li>
+<li><strong>Dim Image</strong> - Backlight failure or brightness settings</li>
+<li><strong>Distorted Image</strong> - Wrong aspect ratio or scaling issues</li>
+</ul>
+<h4 id="projector-specific-issues">Projector-Specific Issues:<a class="headerlink" href="#projector-specific-issues" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Intermittent Projector Shutdown</strong> - Overheating or lamp end-of-life</li>
+<li><strong>Audio Issues</strong> - HDMI audio routing problems</li>
+</ul>
+<h3 id="display-troubleshooting-steps">Display Troubleshooting Steps:<a class="headerlink" href="#display-troubleshooting-steps" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Check Input Selection</strong> - Verify correct input source</li>
+<li><strong>Test Cables</strong> - Try different video cables</li>
+<li><strong>Adjust Resolution</strong> - Match native display resolution</li>
+<li><strong>Update Drivers</strong> - Graphics card driver issues</li>
+<li><strong>Test Different Display</strong> - Isolate display vs graphics card</li>
+<li><strong>Check Power</strong> - Ensure adequate power to display</li>
+</ol>
+<p><em>Key Study Point: Always check simple things first - input source, cable connections, and resolution settings before assuming hardware failure.</em></p>
+<hr />
+<h2 id="54-mobile-device-issues">5.4 Mobile Device Issues<a class="headerlink" href="#54-mobile-device-issues" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll diagnose mobile device problems and determine appropriate repair vs replacement decisions.</p>
+<h3 id="common-mobile-device-symptoms">Common Mobile Device Symptoms:<a class="headerlink" href="#common-mobile-device-symptoms" title="Permanent link">&para;</a></h3>
+<h4 id="power-and-battery-issues">Power and Battery Issues:<a class="headerlink" href="#power-and-battery-issues" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Poor Battery Health</strong> - Reduced battery life, frequent charging needed</li>
+<li><strong>Swollen Battery</strong> - Physical battery expansion (safety hazard)</li>
+<li><strong>Improper Charging</strong> - Won't charge or charges slowly</li>
+<li><strong>Overheating</strong> - Device becomes excessively hot</li>
+</ul>
+<h4 id="physical-damage">Physical Damage:<a class="headerlink" href="#physical-damage" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Broken Screen</strong> - Cracked or shattered display</li>
+<li><strong>Physically Damaged Ports</strong> - Charging/data ports damaged</li>
+<li><strong>Liquid Damage</strong> - Water or moisture exposure</li>
+<li><strong>Digitizer Issues</strong> - Touch screen not responding properly</li>
+</ul>
+<h4 id="performance-and-software-issues">Performance and Software Issues:<a class="headerlink" href="#performance-and-software-issues" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Poor/No Connectivity</strong> - Wi-Fi, cellular, or Bluetooth problems</li>
+<li><strong>Malware</strong> - Suspicious apps or behavior</li>
+<li><strong>Cursor Drift/Touch Calibration</strong> - Inaccurate touch response</li>
+<li><strong>Unable to Install New Applications</strong> - Storage full or OS restrictions</li>
+<li><strong>Stylus Does Not Work</strong> - Digitizer or stylus problems</li>
+<li><strong>Degraded Performance</strong> - Slow operation, app crashes</li>
+</ul>
+<h3 id="mobile-device-troubleshooting">Mobile Device Troubleshooting:<a class="headerlink" href="#mobile-device-troubleshooting" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Safety Assessment</strong> - Swollen batteries require immediate replacement</li>
+<li><strong>Basic Connectivity</strong> - Check network settings and signal strength</li>
+<li><strong>Restart/Reset</strong> - Soft reset often resolves software issues</li>
+<li><strong>Storage Check</strong> - Verify available storage space</li>
+<li><strong>Update Software</strong> - Install OS and app updates</li>
+<li><strong>Factory Reset</strong> - Last resort for software issues</li>
+</ol>
+<p><em>Key Study Point: Swollen batteries are safety hazards requiring immediate attention. Many mobile issues are software-related and can be resolved without hardware replacement.</em></p>
+<hr />
+<h2 id="55-network-issues">5.5 Network Issues<a class="headerlink" href="#55-network-issues" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll systematically troubleshoot network connectivity problems using appropriate tools and methodology.</p>
+<h3 id="common-network-symptoms">Common Network Symptoms:<a class="headerlink" href="#common-network-symptoms" title="Permanent link">&para;</a></h3>
+<h4 id="connectivity-problems">Connectivity Problems:<a class="headerlink" href="#connectivity-problems" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Intermittent Wireless Connectivity</strong> - Drops connection randomly</li>
+<li><strong>Slow Network Speeds</strong> - Reduced throughput</li>
+<li><strong>Limited Connectivity</strong> - Connected but no internet access</li>
+<li><strong>Intermittent Internet Connectivity</strong> - Internet access comes and goes</li>
+</ul>
+<h4 id="network-quality-issues">Network Quality Issues:<a class="headerlink" href="#network-quality-issues" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Jitter</strong> - Inconsistent packet delivery timing</li>
+<li><strong>Poor VoIP Quality</strong> - Voice calls breaking up or delayed</li>
+<li><strong>High Latency</strong> - Slow response times</li>
+<li><strong>External Interference</strong> - Wireless signal disruption</li>
+</ul>
+<h4 id="infrastructure-problems">Infrastructure Problems:<a class="headerlink" href="#infrastructure-problems" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Port Flapping</strong> - Network port repeatedly connecting/disconnecting</li>
+<li><strong>Authentication Failures</strong> - Can't join wireless networks or domain</li>
+</ul>
+<h3 id="network-troubleshooting-methodology">Network Troubleshooting Methodology:<a class="headerlink" href="#network-troubleshooting-methodology" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Check Physical Connections</strong> - Cables, power, link lights</li>
+<li><strong>Verify IP Configuration</strong> - IP address, subnet mask, gateway, DNS</li>
+<li><strong>Test Connectivity</strong> - Ping local gateway, then external hosts</li>
+<li><strong>Check Wireless Settings</strong> - SSID, security type, signal strength</li>
+<li><strong>Analyze Traffic</strong> - Use network monitoring tools</li>
+<li><strong>Update Drivers/Firmware</strong> - Network adapter and router updates</li>
+</ol>
+<h3 id="network-troubleshooting-tools">Network Troubleshooting Tools:<a class="headerlink" href="#network-troubleshooting-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ping</strong> - Test basic connectivity</li>
+<li><strong>ipconfig/ifconfig</strong> - Check IP configuration</li>
+<li><strong>nslookup</strong> - Test DNS resolution</li>
+<li><strong>Wi-Fi Analyzer</strong> - Check wireless signal strength and interference</li>
+<li><strong>Cable Tester</strong> - Verify cable integrity</li>
+<li><strong>Network Monitor</strong> - Analyze traffic patterns</li>
+</ul>
+<p><em>Key Study Point: Use the OSI model approach - start with physical layer (cables, power) and work up through network, then application layers.</em></p>
+<hr />
+<h2 id="56-printer-issues">5.6 Printer Issues<a class="headerlink" href="#56-printer-issues" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll diagnose and resolve printer problems specific to different printer technologies.</p>
+<h3 id="common-printer-symptoms">Common Printer Symptoms:<a class="headerlink" href="#common-printer-symptoms" title="Permanent link">&para;</a></h3>
+<h4 id="print-quality-issues">Print Quality Issues:<a class="headerlink" href="#print-quality-issues" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Lines Down Printed Pages</strong> - Dirty or damaged print heads/drums</li>
+<li><strong>Garbled Print</strong> - Driver issues or communication problems</li>
+<li><strong>Faded Prints</strong> - Low toner/ink or print head issues</li>
+<li><strong>Speckling on Printed Pages</strong> - Dirty components or toner issues</li>
+<li><strong>Double/Echo Images</strong> - Drum or fuser problems in laser printers</li>
+</ul>
+<h4 id="paper-handling-problems">Paper Handling Problems:<a class="headerlink" href="#paper-handling-problems" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Paper Jams</strong> - Mechanical feed issues or wrong paper type</li>
+<li><strong>Paper Not Feeding</strong> - Roller problems or empty trays</li>
+<li><strong>Multipage Misfeed</strong> - Multiple sheets feeding at once</li>
+<li><strong>Incorrect Page Orientation</strong> - Software vs hardware orientation settings</li>
+<li><strong>Tray Not Recognized</strong> - Sensor or driver issues</li>
+</ul>
+<h4 id="system-and-queue-issues">System and Queue Issues:<a class="headerlink" href="#system-and-queue-issues" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Multiple Prints Pending in Queue</strong> - Print spooler problems</li>
+<li><strong>Connectivity Issues</strong> - Network or USB connection problems</li>
+<li><strong>Frozen Print Queue</strong> - Spooler service stopped or corrupted jobs</li>
+</ul>
+<h4 id="mechanical-problems">Mechanical Problems:<a class="headerlink" href="#mechanical-problems" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Grinding Noise</strong> - Mechanical component failure</li>
+<li><strong>Finishing Issues</strong> - Stapler jams, hole punch problems</li>
+</ul>
+<h3 id="printer-troubleshooting-by-type">Printer Troubleshooting by Type:<a class="headerlink" href="#printer-troubleshooting-by-type" title="Permanent link">&para;</a></h3>
+<h4 id="laser-printers">Laser Printers:<a class="headerlink" href="#laser-printers" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Check toner levels and distribution</li>
+<li>Clean imaging drum and corona wires</li>
+<li>Verify fuser temperature and operation</li>
+<li>Replace maintenance kit components</li>
+</ul>
+<h4 id="inkjet-printers">Inkjet Printers:<a class="headerlink" href="#inkjet-printers" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Clean print heads and nozzles</li>
+<li>Check ink cartridge installation</li>
+<li>Align print heads</li>
+<li>Clear paper path obstructions</li>
+</ul>
+<h4 id="thermal-printers">Thermal Printers:<a class="headerlink" href="#thermal-printers" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Check thermal paper quality and installation</li>
+<li>Clean heating element</li>
+<li>Verify paper path alignment</li>
+</ul>
+<p><em>Key Study Point: Different printer types have unique maintenance requirements. Print quality issues often indicate specific component problems that vary by printer technology.</em></p>
+<hr />
+<h2 id="comptia-troubleshooting-methodology">CompTIA Troubleshooting Methodology<a class="headerlink" href="#comptia-troubleshooting-methodology" title="Permanent link">&para;</a></h2>
+<h3 id="the-6-step-process">The 6-Step Process:<a class="headerlink" href="#the-6-step-process" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Identify the Problem</strong></p>
+<ul>
+<li>Gather information from users</li>
+<li>Document symptoms</li>
+<li>Determine recent changes</li>
+<li>
+<p><strong>Establish Theory of Probable Cause</strong></p>
+</li>
+<li>
+<p>Question the obvious first</p>
+</li>
+<li>Consider multiple possibilities</li>
+<li>Research knowledge base if needed</li>
+<li>
+<p><strong>Test the Theory</strong></p>
+</li>
+<li>
+<p>If confirmed → proceed to step 4</p>
+</li>
+<li>If not confirmed → return to step 2</li>
+<li>
+<p><strong>Establish Plan of Action</strong></p>
+</li>
+<li>
+<p>Determine steps to resolve</p>
+</li>
+<li>Consider impact on users/systems</li>
+<li>Get approval for major changes</li>
+<li>
+<p><strong>Implement the Solution</strong></p>
+</li>
+<li>
+<p>Execute the plan</p>
+</li>
+<li>Verify full system functionality</li>
+<li>Implement preventive measures</li>
+<li>
+<p><strong>Document Everything</strong></p>
+</li>
+<li>
+<p>Record findings and lessons learned</p>
+</li>
+<li>Document actions taken</li>
+<li>Note outcomes for future reference</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="study-tips-for-troubleshooting-domain">Study Tips for Troubleshooting Domain<a class="headerlink" href="#study-tips-for-troubleshooting-domain" title="Permanent link">&para;</a></h2>
+<h3 id="high-priority-symptoms-to-memorize">High-Priority Symptoms to Memorize:<a class="headerlink" href="#high-priority-symptoms-to-memorize" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>POST beep patterns</strong> and their meanings</li>
+<li><strong>S.M.A.R.T. failures</strong> as predictive indicators</li>
+<li><strong>Swollen batteries</strong> as safety hazards</li>
+<li><strong>Grinding/clicking sounds</strong> from storage devices</li>
+<li><strong>Print quality issues</strong> by printer type</li>
+</ul>
+<h3 id="troubleshooting-strategy">Troubleshooting Strategy:<a class="headerlink" href="#troubleshooting-strategy" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Always start with the obvious</strong> - power, connections, settings</li>
+<li><strong>Use substitution method</strong> - swap components to isolate problems</li>
+<li><strong>Check recent changes</strong> - new hardware, software, or configuration</li>
+<li><strong>Document everything</strong> - symptoms, tests performed, solutions</li>
+</ul>
+<h3 id="common-exam-scenarios">Common Exam Scenarios:<a class="headerlink" href="#common-exam-scenarios" title="Permanent link">&para;</a></h3>
+<ul>
+<li>System won't boot (POST beeps, power issues)</li>
+<li>Slow performance (overheating, insufficient RAM, failing storage)</li>
+<li>Network connectivity problems (IP configuration, wireless settings)</li>
+<li>Print quality issues (maintenance needed, wrong drivers)</li>
+<li>Mobile device problems (battery, connectivity, physical damage)</li>
+</ul>
+<h3 id="tools-and-commands-to-know">Tools and Commands to Know:<a class="headerlink" href="#tools-and-commands-to-know" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Hardware tools:</strong> Multimeter, POST card, cable tester</li>
+<li><strong>Software tools:</strong> Device Manager, Event Viewer, ping, ipconfig</li>
+<li><strong>Mobile tools:</strong> Built-in diagnostics, Wi-Fi analyzer</li>
+<li><strong>Printer tools:</strong> Test pages, cleaning utilities, driver updates</li>
+</ul>
+<h3 id="critical-safety-considerations">Critical Safety Considerations:<a class="headerlink" href="#critical-safety-considerations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Burning smells</strong> - immediate shutdown required</li>
+<li><strong>Swollen batteries</strong> - fire/explosion hazard</li>
+<li><strong>Grinding hard drives</strong> - potential data loss</li>
+<li><strong>Overheating components</strong> - thermal damage risk</li>
+</ul>
+<hr />
+<p><em>Weight: 28% of Core 1 Exam | Estimated Study Time: 35-40 hours</em></p>
+<p><strong>Note:</strong> This is the largest domain on the exam at 28%. Focus heavily on symptom recognition and the troubleshooting methodology, as these concepts apply across all hardware and network scenarios.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../virtualization/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4.0 Virtualization">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                4.0 Virtualization
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../core2/1.0-operating-systems-overview/" class="md-footer__link md-footer__link--next" aria-label="Next: 1.0 Operating Systems">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                1.0 Operating Systems
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../js/print-button.js"></script>
+      
+    
+  </body>
+</html>

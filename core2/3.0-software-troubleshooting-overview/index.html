@@ -1,0 +1,1711 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../2.0-security-overview/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>3.0 Software Troubleshooting - CompTIA A+ Study Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-button.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#30-software-troubleshooting-23-of-core-2-exam" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CompTIA A+ Study Guide" class="md-header__button md-logo" aria-label="CompTIA A+ Study Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CompTIA A+ Study Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3.0 Software Troubleshooting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.55 19.09 1.41 1.41 1.8-1.79-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71 1.8 1.79 1.41-1.41-1.79-1.8M20.45 5l-1.41-1.4-1.8 1.79 1.42 1.42M13 1h-2v3h2M6.76 5.39 4.96 3.6 3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-objectives/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exam Objectives
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../core1/1.0-mobile-devices/" class="md-tabs__link">
+          
+  
+  
+  Core 1
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1.0-operating-systems-overview/" class="md-tabs__link">
+          
+  
+  
+  Core 2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CompTIA A+ Study Guide" class="md-nav__button md-logo" aria-label="CompTIA A+ Study Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CompTIA A+ Study Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam Objectives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    1.0 Mobile Devices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            1.0 Mobile Devices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/1.0-mobile-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/1.0-mobile-devices/1.1-laptop-hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Laptop Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/1.0-mobile-devices/1.2-connecting-mobile-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connecting Devices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/1.0-mobile-devices/1.2-mobile-device-accessories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/1.0-mobile-devices/1.3-mobile-device-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobile Device Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/1.0-mobile-devices/1.3-mobile-device-networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobile Networks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Networking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/virtualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0 Virtualization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.0 Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Core 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-operating-systems-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 Operating Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.0-security-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3.0 Software Troubleshooting
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Software Troubleshooting
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-common-windows-os-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Common Windows OS Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Common Windows OS Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#critical-system-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical System Failures:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Problems:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-stability-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Stability Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-and-hardware-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource and Hardware Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-troubleshooting-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Troubleshooting Tools:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-common-mobile-os-and-application-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Common Mobile OS and Application Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Common Mobile OS and Application Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Problems:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Performance Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-and-system-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware and System Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectivity-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connectivity Problems:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-specific-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device-Specific Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-troubleshooting-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Troubleshooting Techniques:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-common-mobile-os-and-application-security-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Common Mobile OS and Application Security Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Common Mobile OS and Application Security Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-risk-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Risk Sources:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-compromise-symptoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Compromise Symptoms:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-security-threats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Security Threats:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Security Best Practices:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-common-pc-security-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Common PC Security Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Common PC Security Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-access-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Access Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-behavior-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Behavior Changes:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browser-related-security-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Browser-Related Security Issues:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pc-security-troubleshooting-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      PC Security Troubleshooting Steps:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-incident-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Incident Response:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-tips-for-software-troubleshooting-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Study Tips for Software Troubleshooting Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Study Tips for Software Troubleshooting Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-priority-troubleshooting-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Priority Troubleshooting Skills:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-exam-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Exam Scenarios:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting Methodology:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-diagnostic-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Diagnostic Tools:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symptoms-vs-causes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symptoms vs. Causes:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevention-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prevention Strategies:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-specific-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile-Specific Considerations:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="30-software-troubleshooting-23-of-core-2-exam">3.0 Software Troubleshooting (23% of Core 2 Exam)<a class="headerlink" href="#30-software-troubleshooting-23-of-core-2-exam" title="Permanent link">&para;</a></h1>
+<p><em>Focus: Systematic troubleshooting of Windows OS issues, mobile device problems, application failures, and security-related software problems using appropriate diagnostic tools and methodologies</em></p>
+<hr />
+<h2 id="31-common-windows-os-issues">3.1 Common Windows OS Issues<a class="headerlink" href="#31-common-windows-os-issues" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll diagnose and resolve Windows operating system problems using systematic troubleshooting approaches and built-in diagnostic tools.</p>
+<h3 id="critical-system-failures">Critical System Failures:<a class="headerlink" href="#critical-system-failures" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Blue Screen of Death (BSOD)</strong><ul>
+<li>Hardware driver conflicts or failures</li>
+<li>Memory problems or system file corruption</li>
+<li>Check Event Viewer for specific error codes</li>
+<li>Use System File Checker (sfc /scannow) for repair</li>
+</ul>
+</li>
+<li><strong>Boot Issues</strong><ul>
+<li>Missing or corrupted boot files</li>
+<li>Hard drive failures or bad sectors</li>
+<li>Incorrect boot order or missing bootable device</li>
+<li>Use Windows Recovery Environment or bootrec commands</li>
+</ul>
+</li>
+<li><strong>No OS Found</strong><ul>
+<li>Boot sector corruption or hard drive failure</li>
+<li>Incorrect BIOS/UEFI boot settings</li>
+<li>Disconnected or failed storage devices</li>
+</ul>
+</li>
+</ul>
+<h3 id="performance-problems">Performance Problems:<a class="headerlink" href="#performance-problems" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Degraded Performance</strong><ul>
+<li>Insufficient RAM or high memory usage</li>
+<li>Background processes consuming resources</li>
+<li>Hard drive fragmentation or near-full storage</li>
+<li>Malware or unwanted programs running</li>
+</ul>
+</li>
+<li><strong>Slow Profile Load</strong><ul>
+<li>Corrupted user profile or excessive startup programs</li>
+<li>Network connectivity issues for domain profiles</li>
+<li>Large profile size or damaged profile data</li>
+</ul>
+</li>
+</ul>
+<h3 id="system-stability-issues">System Stability Issues:<a class="headerlink" href="#system-stability-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Frequent Shutdowns</strong><ul>
+<li>Overheating due to dust or fan failures</li>
+<li>Power supply problems or unstable power</li>
+<li>Driver conflicts or hardware incompatibility</li>
+</ul>
+</li>
+<li><strong>Services Not Starting</strong><ul>
+<li>Dependency services not running</li>
+<li>Corrupted service configurations</li>
+<li>Insufficient permissions or account issues</li>
+</ul>
+</li>
+<li><strong>Applications Crashing</strong><ul>
+<li>Compatibility issues with OS version</li>
+<li>Corrupted application files or settings</li>
+<li>Insufficient system resources (RAM, disk space)</li>
+</ul>
+</li>
+<li><strong>System Instability</strong><ul>
+<li>Hardware conflicts or driver issues</li>
+<li>Registry corruption or system file damage</li>
+<li>Overclocking or unstable hardware settings</li>
+</ul>
+</li>
+</ul>
+<h3 id="resource-and-hardware-issues">Resource and Hardware Issues:<a class="headerlink" href="#resource-and-hardware-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Low Memory Warnings</strong><ul>
+<li>Insufficient physical RAM for running applications</li>
+<li>Memory leaks in applications or drivers</li>
+<li>Virtual memory (page file) configuration problems</li>
+</ul>
+</li>
+<li><strong>USB Controller Resource Warnings</strong><ul>
+<li>Too many USB devices drawing power</li>
+<li>USB hub overload or driver conflicts</li>
+<li>Insufficient USB controller resources</li>
+</ul>
+</li>
+<li><strong>Time Drift</strong><ul>
+<li>CMOS battery failure affecting system clock</li>
+<li>Network time synchronization problems</li>
+<li>Incorrect time zone or daylight saving settings</li>
+</ul>
+</li>
+</ul>
+<h3 id="windows-troubleshooting-tools">Windows Troubleshooting Tools:<a class="headerlink" href="#windows-troubleshooting-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Event Viewer</strong> - Check system and application logs for errors</li>
+<li><strong>System File Checker</strong> - Scan and repair corrupted system files</li>
+<li><strong>Memory Diagnostic</strong> - Test RAM for hardware problems</li>
+<li><strong>Device Manager</strong> - Check for hardware conflicts and driver issues</li>
+<li><strong>Task Manager</strong> - Monitor resource usage and end problematic processes</li>
+<li><strong>Safe Mode</strong> - Boot with minimal drivers to isolate problems</li>
+<li><strong>System Restore</strong> - Revert to previous working configuration</li>
+<li><strong>Windows Recovery Environment</strong> - Advanced startup repair options</li>
+</ul>
+<p><em>Key Study Point: BSOD errors provide specific codes that indicate hardware or driver problems. Performance issues are often caused by insufficient resources or malware. Use Event Viewer to identify specific error causes.</em></p>
+<hr />
+<h2 id="32-common-mobile-os-and-application-issues">3.2 Common Mobile OS and Application Issues<a class="headerlink" href="#32-common-mobile-os-and-application-issues" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll troubleshoot mobile device software problems, application failures, and connectivity issues across iOS and Android platforms.</p>
+<h3 id="application-problems">Application Problems:<a class="headerlink" href="#application-problems" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Application Fails to Launch</strong><ul>
+<li>Corrupted app installation or insufficient storage space</li>
+<li>OS compatibility issues or outdated app version</li>
+<li>Insufficient permissions or restricted app access</li>
+</ul>
+</li>
+<li><strong>Application Fails to Close/Crashes</strong><ul>
+<li>Memory leaks or insufficient available RAM</li>
+<li>App conflicts with other running applications</li>
+<li>Corrupted app data or settings</li>
+</ul>
+</li>
+<li><strong>Application Fails to Update</strong><ul>
+<li>Insufficient storage space for update files</li>
+<li>Network connectivity problems during download</li>
+<li>App store authentication or account issues</li>
+</ul>
+</li>
+<li><strong>Application Fails to Install</strong><ul>
+<li>Insufficient storage space or incompatible device</li>
+<li>Restricted installation from unknown sources</li>
+<li>App store account or payment issues</li>
+</ul>
+</li>
+</ul>
+<h3 id="system-performance-issues">System Performance Issues:<a class="headerlink" href="#system-performance-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Slow to Respond</strong><ul>
+<li>Insufficient available RAM or storage space</li>
+<li>Background app refresh consuming resources</li>
+<li>Thermal throttling due to overheating</li>
+</ul>
+</li>
+<li><strong>OS Fails to Update</strong><ul>
+<li>Insufficient storage space for OS update</li>
+<li>Network connectivity problems or metered connection</li>
+<li>Battery level too low or device not plugged in</li>
+</ul>
+</li>
+</ul>
+<h3 id="hardware-and-system-issues">Hardware and System Issues:<a class="headerlink" href="#hardware-and-system-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Battery Life Issues</strong><ul>
+<li>Background app refresh and location services</li>
+<li>Display brightness and wireless connectivity</li>
+<li>Aging battery requiring replacement</li>
+</ul>
+</li>
+<li><strong>Random Reboots</strong><ul>
+<li>Overheating due to heavy usage or environmental factors</li>
+<li>Software conflicts or corrupted system files</li>
+<li>Hardware problems or battery issues</li>
+</ul>
+</li>
+</ul>
+<h3 id="connectivity-problems">Connectivity Problems:<a class="headerlink" href="#connectivity-problems" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Bluetooth Issues</strong><ul>
+<li>Device pairing problems or interference</li>
+<li>Outdated drivers or firmware</li>
+<li>Power management settings affecting connectivity</li>
+</ul>
+</li>
+<li><strong>Wi-Fi Connectivity</strong><ul>
+<li>Network authentication or password problems</li>
+<li>Router compatibility or signal strength issues</li>
+<li>DNS configuration or network settings</li>
+</ul>
+</li>
+<li><strong>NFC (Near-Field Communication)</strong><ul>
+<li>Disabled NFC settings or unsupported device</li>
+<li>Physical alignment problems or interference</li>
+<li>App-specific NFC permission issues</li>
+</ul>
+</li>
+</ul>
+<h3 id="device-specific-issues">Device-Specific Issues:<a class="headerlink" href="#device-specific-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Screen Does Not Auto-rotate</strong><ul>
+<li>Rotation lock enabled in control center</li>
+<li>Accelerometer calibration or hardware problems</li>
+<li>App-specific rotation restrictions</li>
+</ul>
+</li>
+</ul>
+<h3 id="mobile-troubleshooting-techniques">Mobile Troubleshooting Techniques:<a class="headerlink" href="#mobile-troubleshooting-techniques" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Force Close Applications</strong> - End unresponsive apps</li>
+<li><strong>Restart Device</strong> - Soft reset to clear temporary issues</li>
+<li><strong>Check Storage Space</strong> - Ensure adequate free space</li>
+<li><strong>Update Apps and OS</strong> - Install latest software versions</li>
+<li><strong>Reset Network Settings</strong> - Clear Wi-Fi and Bluetooth configurations</li>
+<li><strong>Factory Reset</strong> - Complete device restoration (last resort)</li>
+<li><strong>Safe Mode</strong> - Boot with minimal apps (Android)</li>
+<li><strong>DFU Mode</strong> - Device Firmware Update mode (iOS)</li>
+</ul>
+<p><em>Key Study Point: Most mobile issues are software-related and can be resolved with updates, restarts, or clearing storage space. Connectivity problems often involve authentication or configuration issues.</em></p>
+<hr />
+<h2 id="33-common-mobile-os-and-application-security-issues">3.3 Common Mobile OS and Application Security Issues<a class="headerlink" href="#33-common-mobile-os-and-application-security-issues" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll identify security threats specific to mobile devices and understand symptoms that indicate compromise or unauthorized access.</p>
+<h3 id="security-risk-sources">Security Risk Sources:<a class="headerlink" href="#security-risk-sources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Application Sources</strong><ul>
+<li><strong>Unofficial Application Stores</strong> - Third-party app stores with unvetted apps</li>
+<li><strong>Sideloading</strong> - Installing apps outside official stores</li>
+<li><strong>Developer Mode</strong> - Enabled development options that bypass security</li>
+</ul>
+</li>
+<li><strong>System Modifications</strong><ul>
+<li><strong>Root Access</strong> - Android administrative access bypass</li>
+<li><strong>Jailbreak</strong> - iOS security restriction bypass</li>
+<li><strong>Unauthorized Applications</strong> - Apps installed without permission</li>
+<li><strong>Application Spoofing</strong> - Fake apps mimicking legitimate ones</li>
+</ul>
+</li>
+</ul>
+<h3 id="security-compromise-symptoms">Security Compromise Symptoms:<a class="headerlink" href="#security-compromise-symptoms" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Network Activity Indicators</strong><ul>
+<li><strong>High Network Traffic</strong> - Unusual data usage patterns</li>
+<li><strong>Data Usage Limit Notifications</strong> - Unexpected high data consumption</li>
+<li><strong>Limited/No Internet Connectivity</strong> - Blocked or redirected connections</li>
+</ul>
+</li>
+<li><strong>Performance Indicators</strong><ul>
+<li><strong>Degraded Response Time</strong> - Slower device performance</li>
+<li><strong>High Number of Ads</strong> - Excessive or inappropriate advertisements</li>
+<li><strong>Fake Security Warnings</strong> - False alerts about device security</li>
+</ul>
+</li>
+<li><strong>Behavioral Changes</strong><ul>
+<li><strong>Unexpected Application Behavior</strong> - Apps acting differently than normal</li>
+<li><strong>Leaked Personal Files/Data</strong> - Personal information appearing elsewhere</li>
+</ul>
+</li>
+</ul>
+<h3 id="mobile-security-threats">Mobile Security Threats:<a class="headerlink" href="#mobile-security-threats" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Malware Types</strong><ul>
+<li><strong>Mobile Trojans</strong> - Disguised malicious applications</li>
+<li><strong>Spyware</strong> - Applications that monitor user activity</li>
+<li><strong>Adware</strong> - Apps that display excessive advertisements</li>
+<li><strong>Banking Trojans</strong> - Apps targeting financial information</li>
+</ul>
+</li>
+<li><strong>Privacy Violations</strong><ul>
+<li><strong>Location Tracking</strong> - Unauthorized location monitoring</li>
+<li><strong>Contact Access</strong> - Unauthorized address book access</li>
+<li><strong>Camera/Microphone Access</strong> - Unauthorized media recording</li>
+<li><strong>SMS/Call Monitoring</strong> - Communication interception</li>
+</ul>
+</li>
+</ul>
+<h3 id="mobile-security-best-practices">Mobile Security Best Practices:<a class="headerlink" href="#mobile-security-best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Use Official App Stores</strong> - Download from Google Play or Apple App Store</li>
+<li><strong>Review App Permissions</strong> - Check what access apps request</li>
+<li><strong>Keep OS Updated</strong> - Install security patches promptly</li>
+<li><strong>Enable Device Encryption</strong> - Protect data if device is lost/stolen</li>
+<li><strong>Use Screen Locks</strong> - PIN, pattern, biometric authentication</li>
+<li><strong>Regular Security Scans</strong> - Use mobile security applications</li>
+<li><strong>Avoid Public Wi-Fi</strong> - Use VPN for sensitive activities</li>
+<li><strong>Remote Wipe Capability</strong> - Enable find/wipe features</li>
+</ul>
+<p><em>Key Study Point: Jailbreaking/rooting removes security protections. Unusual data usage often indicates malware. Official app stores provide better security than third-party sources.</em></p>
+<hr />
+<h2 id="34-common-pc-security-issues">3.4 Common PC Security Issues<a class="headerlink" href="#34-common-pc-security-issues" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll recognize symptoms of security compromise on desktop computers and understand appropriate response procedures.</p>
+<h3 id="system-access-issues">System Access Issues:<a class="headerlink" href="#system-access-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Unable to Access Network</strong><ul>
+<li>Malware blocking network connectivity</li>
+<li>Firewall misconfigurations blocking legitimate traffic</li>
+<li>DNS hijacking redirecting traffic to malicious servers</li>
+</ul>
+</li>
+<li><strong>Altered System Files</strong><ul>
+<li><strong>Missing/Renamed Files</strong> - Ransomware or file-infecting malware</li>
+<li><strong>Inability to Access Files</strong> - Encryption by ransomware</li>
+<li>System file corruption by malware or failed updates</li>
+</ul>
+</li>
+</ul>
+<h3 id="system-behavior-changes">System Behavior Changes:<a class="headerlink" href="#system-behavior-changes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Desktop Alerts</strong><ul>
+<li>Fake antivirus warnings demanding payment</li>
+<li>System compromise notifications from unknown sources</li>
+<li>Pop-ups claiming system infections or performance issues</li>
+</ul>
+</li>
+<li><strong>False Antivirus Alerts</strong><ul>
+<li>Scareware displaying fake security warnings</li>
+<li>Requests for payment to "fix" non-existent problems</li>
+<li>Recommendations to download suspicious software</li>
+</ul>
+</li>
+<li><strong>Unwanted OS Notifications</strong><ul>
+<li>Persistent pop-ups about system problems</li>
+<li>Notifications from unknown or suspicious sources</li>
+<li>Alerts directing users to malicious websites</li>
+</ul>
+</li>
+<li><strong>OS Update Failures</strong><ul>
+<li>Malware preventing security updates</li>
+<li>System file corruption blocking update installation</li>
+<li>Network blocking or redirection of update traffic</li>
+</ul>
+</li>
+</ul>
+<h3 id="browser-related-security-issues">Browser-Related Security Issues:<a class="headerlink" href="#browser-related-security-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Random/Frequent Pop-ups</strong><ul>
+<li>Adware infections causing excessive advertisements</li>
+<li>Browser hijacking redirecting to unwanted sites</li>
+<li>Malicious websites attempting to install software</li>
+</ul>
+</li>
+<li><strong>Certificate Warnings</strong><ul>
+<li>Man-in-the-middle attacks intercepting HTTPS traffic</li>
+<li>Expired or invalid website certificates</li>
+<li>Browser security settings detecting suspicious sites</li>
+</ul>
+</li>
+<li><strong>Browser Redirection</strong><ul>
+<li>DNS hijacking redirecting to malicious sites</li>
+<li>Browser hijacking malware changing homepage/search</li>
+<li>Proxy settings modified to route traffic through attackers</li>
+</ul>
+</li>
+<li><strong>Degraded Browser Performance</strong><ul>
+<li>Excessive browser extensions or toolbars</li>
+<li>Malware running within browser processes</li>
+<li>Corrupted browser profiles or settings</li>
+</ul>
+</li>
+</ul>
+<h3 id="pc-security-troubleshooting-steps">PC Security Troubleshooting Steps:<a class="headerlink" href="#pc-security-troubleshooting-steps" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Disconnect from Network</strong> - Prevent further damage or data theft</li>
+<li><strong>Boot into Safe Mode</strong> - Isolate problems and scan for malware</li>
+<li><strong>Run Multiple Security Scans</strong> - Use different antivirus/anti-malware tools</li>
+<li><strong>Check System Files</strong> - Use sfc /scannow to verify system integrity</li>
+<li><strong>Review Installed Programs</strong> - Remove suspicious or unknown software</li>
+<li><strong>Check Browser Settings</strong> - Reset homepage, search engine, proxy settings</li>
+<li><strong>Update Security Software</strong> - Ensure latest definitions and patches</li>
+<li><strong>Change Passwords</strong> - Update credentials that may have been compromised</li>
+<li><strong>Restore from Backup</strong> - Replace compromised files with clean versions</li>
+<li><strong>Monitor System Behavior</strong> - Watch for signs of remaining compromise</li>
+</ol>
+<h3 id="security-incident-response">Security Incident Response:<a class="headerlink" href="#security-incident-response" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Document Symptoms</strong> - Record observed problems and error messages</li>
+<li><strong>Preserve Evidence</strong> - Don't immediately clean systems if forensics needed</li>
+<li><strong>Notify Management</strong> - Report security incidents according to policy</li>
+<li><strong>Change Compromised Credentials</strong> - Update passwords and authentication</li>
+<li><strong>Implement Additional Monitoring</strong> - Watch for signs of persistent compromise</li>
+</ul>
+<p><em>Key Study Point: Security incidents often present multiple symptoms simultaneously. Browser problems frequently indicate malware infections. Always disconnect compromised systems from the network first.</em></p>
+<hr />
+<h2 id="study-tips-for-software-troubleshooting-domain">Study Tips for Software Troubleshooting Domain<a class="headerlink" href="#study-tips-for-software-troubleshooting-domain" title="Permanent link">&para;</a></h2>
+<h3 id="high-priority-troubleshooting-skills">High-Priority Troubleshooting Skills:<a class="headerlink" href="#high-priority-troubleshooting-skills" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Windows diagnostic tools</strong> (Event Viewer, sfc, Device Manager)</li>
+<li><strong>Mobile device reset procedures</strong> (soft reset, factory reset, network reset)</li>
+<li><strong>Security incident recognition</strong> (malware symptoms, compromise indicators)</li>
+<li><strong>Systematic troubleshooting approach</strong> (identify, isolate, resolve, verify)</li>
+</ul>
+<h3 id="common-exam-scenarios">Common Exam Scenarios:<a class="headerlink" href="#common-exam-scenarios" title="Permanent link">&para;</a></h3>
+<ul>
+<li>System won't boot or shows BSOD errors</li>
+<li>Mobile apps failing to launch or update</li>
+<li>Unusual network activity or pop-up advertisements</li>
+<li>Browser redirection or certificate warnings</li>
+<li>Performance degradation on desktop or mobile devices</li>
+</ul>
+<h3 id="troubleshooting-methodology">Troubleshooting Methodology:<a class="headerlink" href="#troubleshooting-methodology" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Identify the Problem</strong> - Gather information and document symptoms</li>
+<li><strong>Establish Theory</strong> - Determine most likely cause based on symptoms</li>
+<li><strong>Test Theory</strong> - Verify the suspected cause</li>
+<li><strong>Plan and Implement</strong> - Create and execute solution</li>
+<li><strong>Verify Functionality</strong> - Ensure problem is completely resolved</li>
+<li><strong>Document Process</strong> - Record solution for future reference</li>
+</ol>
+<h3 id="key-diagnostic-tools">Key Diagnostic Tools:<a class="headerlink" href="#key-diagnostic-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Windows:</strong> Event Viewer, Task Manager, Device Manager, sfc</li>
+<li><strong>Mobile:</strong> Built-in diagnostics, safe mode, factory reset</li>
+<li><strong>Network:</strong> ipconfig, ping, nslookup, network settings</li>
+<li><strong>Security:</strong> Antivirus scans, malware removal tools, browser reset</li>
+</ul>
+<h3 id="symptoms-vs-causes">Symptoms vs. Causes:<a class="headerlink" href="#symptoms-vs-causes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Slow Performance</strong> → Insufficient resources, malware, hardware issues</li>
+<li><strong>Won't Boot</strong> → Hardware failure, corrupted files, boot configuration</li>
+<li><strong>App Crashes</strong> → Compatibility issues, corrupted data, insufficient memory</li>
+<li><strong>Network Issues</strong> → Configuration problems, hardware failure, malware</li>
+<li><strong>Security Alerts</strong> → Malware infection, system compromise, false positives</li>
+</ul>
+<h3 id="prevention-strategies">Prevention Strategies:<a class="headerlink" href="#prevention-strategies" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Regular Updates</strong> - Keep OS and applications current</li>
+<li><strong>Backup Strategy</strong> - Regular backups for quick recovery</li>
+<li><strong>Security Software</strong> - Antivirus and anti-malware protection</li>
+<li><strong>User Education</strong> - Training on safe computing practices</li>
+<li><strong>System Monitoring</strong> - Regular health checks and maintenance</li>
+</ul>
+<h3 id="mobile-specific-considerations">Mobile-Specific Considerations:<a class="headerlink" href="#mobile-specific-considerations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Storage Management</strong> - Regular cleanup of cache and unnecessary files</li>
+<li><strong>App Management</strong> - Remove unused apps and review permissions</li>
+<li><strong>Battery Optimization</strong> - Manage background apps and screen brightness</li>
+<li><strong>Security Settings</strong> - Enable device encryption and screen locks</li>
+<li><strong>Update Management</strong> - Keep OS and apps updated for security and performance</li>
+</ul>
+<hr />
+<p><em>Weight: 23% of Core 2 Exam | Estimated Study Time: 25-30 hours</em></p>
+<p><strong>Note:</strong> Software troubleshooting integrates knowledge from Operating Systems and Security domains. Focus on systematic diagnostic approaches and understanding the relationship between symptoms and underlying causes. Practice using built-in diagnostic tools and follow logical troubleshooting methodologies.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../2.0-security-overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2.0 Security">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2.0 Security
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../js/print-button.js"></script>
+      
+    
+  </body>
+</html>

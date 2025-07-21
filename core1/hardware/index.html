@@ -1,0 +1,1826 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../networking/">
+      
+      
+        <link rel="next" href="../virtualization/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>3.0 Hardware - CompTIA A+ Study Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-button.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#30-hardware-25-of-core-1-exam" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CompTIA A+ Study Guide" class="md-header__button md-logo" aria-label="CompTIA A+ Study Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CompTIA A+ Study Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3.0 Hardware
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.55 19.09 1.41 1.41 1.8-1.79-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71 1.8 1.79 1.41-1.41-1.79-1.8M20.45 5l-1.41-1.4-1.8 1.79 1.42 1.42M13 1h-2v3h2M6.76 5.39 4.96 3.6 3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-objectives/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exam Objectives
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1.0-mobile-devices/" class="md-tabs__link">
+          
+  
+  
+  Core 1
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../core2/1.0-operating-systems-overview/" class="md-tabs__link">
+          
+  
+  
+  Core 2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CompTIA A+ Study Guide" class="md-nav__button md-logo" aria-label="CompTIA A+ Study Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CompTIA A+ Study Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam Objectives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    1.0 Mobile Devices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            1.0 Mobile Devices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.1-laptop-hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Laptop Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.2-connecting-mobile-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connecting Devices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.2-mobile-device-accessories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.3-mobile-device-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobile Device Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.3-mobile-device-networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobile Networks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Networking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3.0 Hardware
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Hardware
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-display-components-and-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Display Components and Attributes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Display Components and Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Types:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Components:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-display-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Display Attributes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-cable-types-connectors-features-and-purposes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Cable Types, Connectors, Features, and Purposes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Cable Types, Connectors, Features, and Purposes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Cables:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peripheral-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Peripheral Cables:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video Cables:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Cables:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connector-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connector Types:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-ram-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 RAM Characteristics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 RAM Characteristics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#form-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Factors:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddr-generations" class="md-nav__link">
+    <span class="md-ellipsis">
+      DDR Generations:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ram-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAM Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-storage-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Storage Devices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Storage Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hard-drives-hdds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard Drives (HDDs):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solid-state-drives-ssds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solid State Drives (SSDs):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drive-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drive Configurations:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removable-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removable Storage:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optical-drives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optical Drives:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-motherboards-cpus-and-add-on-cards" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Motherboards, CPUs, and Add-on Cards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 Motherboards, CPUs, and Add-on Cards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motherboard-form-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motherboard Form Factors:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motherboard-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motherboard Connectors:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU Compatibility:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biosuefi-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      BIOS/UEFI Settings:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU Architecture:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expansion-cards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expansion Cards:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cooling-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cooling Solutions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-power-supply-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 Power Supply Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6 Power Supply Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-supply-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Supply Specifications:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-supply-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Supply Types:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37-multifunction-deviceprinter-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7 Multifunction Device/Printer Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7 Multifunction Device/Printer Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deployment-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Considerations:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectivity-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connectivity Options:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Sharing:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Settings:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Services:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-printer-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8 Printer Maintenance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8 Printer Maintenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#laser-printer-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Laser Printer Maintenance:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inkjet-printer-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inkjet Printer Maintenance:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thermal-printer-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thermal Printer Maintenance:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impact-printer-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impact Printer Maintenance:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-tips-for-hardware-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Study Tips for Hardware Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Study Tips for Hardware Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-priority-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Priority Topics:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-exam-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Exam Scenarios:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands-On Practice:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-aids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Aids:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0 Virtualization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.0 Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Core 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core2/1.0-operating-systems-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 Operating Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core2/2.0-security-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core2/3.0-software-troubleshooting-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Software Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="30-hardware-25-of-core-1-exam">3.0 Hardware (25% of Core 1 Exam)<a class="headerlink" href="#30-hardware-25-of-core-1-exam" title="Permanent link">&para;</a></h1>
+<p><em>Focus: Understanding display technologies, cable types, RAM specifications, storage devices, motherboard installation, power supplies, and printer deployment/maintenance</em></p>
+<hr />
+<h2 id="31-display-components-and-attributes">3.1 Display Components and Attributes<a class="headerlink" href="#31-display-components-and-attributes" title="Permanent link">&para;</a></h2>
+<p><strong>Comparison Focus:</strong> You'll need to identify different display technologies and match appropriate display characteristics to specific use cases and requirements.</p>
+<h3 id="display-types">Display Types:<a class="headerlink" href="#display-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>LCD (Liquid Crystal Display)</strong><ul>
+<li><strong>IPS (In-Plane Switching)</strong> - Best color accuracy, wide viewing angles</li>
+<li><strong>TN (Twisted Nematic)</strong> - Fastest response times, lowest cost</li>
+<li><strong>VA (Vertical Alignment)</strong> - Good contrast, moderate response times</li>
+</ul>
+</li>
+<li><strong>OLED (Organic LED)</strong> - Perfect blacks, high contrast, potential burn-in</li>
+<li><strong>Mini-LED</strong> - Better backlighting control, improved contrast over LCD</li>
+</ul>
+<h3 id="display-components">Display Components:<a class="headerlink" href="#display-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Touch Screen/Digitizer</strong> - Converts touch input to digital signals</li>
+<li><strong>Inverter</strong> - Converts DC to AC for LCD backlighting (older displays)</li>
+</ul>
+<h3 id="key-display-attributes">Key Display Attributes:<a class="headerlink" href="#key-display-attributes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pixel Density</strong> - Pixels per inch, affects image sharpness</li>
+<li><strong>Refresh Rates</strong> - 60Hz, 120Hz, 144Hz for smooth motion</li>
+<li><strong>Screen Resolution</strong> - 1080p, 1440p, 4K pixel counts</li>
+<li><strong>Color Gamut</strong> - Range of colors the display can reproduce</li>
+</ul>
+<p><em>Key Study Point: Match display technologies to use cases - IPS for design work, TN for gaming, OLED for media consumption. Understand the trade-offs between cost, performance, and image quality.</em></p>
+<hr />
+<h2 id="32-cable-types-connectors-features-and-purposes">3.2 Cable Types, Connectors, Features, and Purposes<a class="headerlink" href="#32-cable-types-connectors-features-and-purposes" title="Permanent link">&para;</a></h2>
+<p><strong>Summary Focus:</strong> You'll identify appropriate cables and connectors for specific devices and understand their capabilities and limitations.</p>
+<h3 id="network-cables">Network Cables:<a class="headerlink" href="#network-cables" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Copper Categories</strong><ul>
+<li><strong>T568A/T568B Standards</strong> - Wiring configurations for RJ45</li>
+<li><strong>Coaxial</strong> - Cable TV and older network installations</li>
+<li><strong>Shielded Twisted Pair</strong> - Reduces electromagnetic interference</li>
+<li><strong>Unshielded Twisted Pair</strong> - Standard Ethernet cabling</li>
+<li><strong>Direct Burial</strong> - Outdoor installation rated cables</li>
+</ul>
+</li>
+<li><strong>Plenum-Rated</strong> - Fire-resistant cables for air handling spaces</li>
+<li><strong>Optical Fiber</strong><ul>
+<li><strong>Single-mode</strong> - Long distance, laser light source</li>
+<li><strong>Multimode</strong> - Shorter distance, LED light source</li>
+</ul>
+</li>
+</ul>
+<h3 id="peripheral-cables">Peripheral Cables:<a class="headerlink" href="#peripheral-cables" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>USB 2.0</strong> - 480 Mbps, older devices</li>
+<li><strong>USB 3.0</strong> - 5 Gbps, blue connectors</li>
+<li><strong>Serial</strong> - Legacy device communication</li>
+<li><strong>Thunderbolt</strong> - High-speed data and video</li>
+</ul>
+<h3 id="video-cables">Video Cables:<a class="headerlink" href="#video-cables" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>HDMI</strong> - Digital video/audio, consumer standard</li>
+<li><strong>DisplayPort</strong> - High resolution, daisy-chaining support</li>
+<li><strong>DVI</strong> - Digital video only, legacy systems</li>
+<li><strong>VGA</strong> - Analog video, older systems</li>
+<li><strong>USB-C</strong> - Modern all-in-one connector</li>
+</ul>
+<h3 id="storage-cables">Storage Cables:<a class="headerlink" href="#storage-cables" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SATA</strong> - Internal drive connections</li>
+<li><strong>eSATA</strong> - External SATA connections</li>
+</ul>
+<h3 id="connector-types">Connector Types:<a class="headerlink" href="#connector-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>RJ11</strong> - Phone line connections</li>
+<li><strong>RJ45</strong> - Ethernet connections</li>
+<li><strong>F-type</strong> - Coaxial/cable connections</li>
+<li><strong>ST, SC, LC</strong> - Fiber optic connectors</li>
+<li><strong>Lightning</strong> - Apple proprietary</li>
+<li><strong>DB9</strong> - Serial connections</li>
+<li><strong>Molex</strong> - Internal power connections</li>
+</ul>
+<p><em>Key Study Point: Know maximum speeds and distances for each cable type. Understand when to use shielded vs unshielded cables and the differences between fiber types.</em></p>
+<hr />
+<h2 id="33-ram-characteristics">3.3 RAM Characteristics<a class="headerlink" href="#33-ram-characteristics" title="Permanent link">&para;</a></h2>
+<p><strong>Comparison Focus:</strong> You'll select appropriate RAM types based on system requirements and understand compatibility considerations.</p>
+<h3 id="form-factors">Form Factors:<a class="headerlink" href="#form-factors" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>DIMM (Dual In-line Memory Module)</strong> - Desktop systems, 240/288 pins</li>
+<li><strong>SODIMM (Small Outline DIMM)</strong> - Laptops and compact systems</li>
+</ul>
+<h3 id="ddr-generations">DDR Generations:<a class="headerlink" href="#ddr-generations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>DDR4</strong> - Current standard, lower power than DDR3</li>
+<li><strong>DDR5</strong> - Latest generation, higher speeds and capacity</li>
+<li><strong>DDR3</strong> - Legacy systems, higher power consumption</li>
+</ul>
+<h3 id="ram-features">RAM Features:<a class="headerlink" href="#ram-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ECC vs Non-ECC</strong><ul>
+<li><strong>ECC (Error-Correcting Code)</strong> - Detects and corrects memory errors</li>
+<li><strong>Non-ECC</strong> - Standard consumer RAM, no error correction</li>
+</ul>
+</li>
+<li><strong>Channel Configurations</strong> - Single, dual, triple, quad channel setups</li>
+</ul>
+<p><em>Key Study Point: Understand that RAM must match motherboard specifications exactly - generation, form factor, and speed. Know when ECC is required (servers) vs optional (workstations).</em></p>
+<hr />
+<h2 id="34-storage-devices">3.4 Storage Devices<a class="headerlink" href="#34-storage-devices" title="Permanent link">&para;</a></h2>
+<p><strong>Comparison Focus:</strong> You'll evaluate storage options based on performance, capacity, and cost requirements while understanding different interface types.</p>
+<h3 id="hard-drives-hdds">Hard Drives (HDDs):<a class="headerlink" href="#hard-drives-hdds" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Spindle Speeds</strong> - 5400 RPM, 7200 RPM, 10000 RPM</li>
+<li><strong>Form Factors</strong><ul>
+<li><strong>2.5-inch</strong> - Laptops and portable systems</li>
+<li><strong>3.5-inch</strong> - Desktop systems and servers</li>
+</ul>
+</li>
+</ul>
+<h3 id="solid-state-drives-ssds">Solid State Drives (SSDs):<a class="headerlink" href="#solid-state-drives-ssds" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Communication Interfaces</strong><ul>
+<li><strong>NVMe</strong> - Fastest, uses PCIe lanes directly</li>
+<li><strong>SATA</strong> - Compatible with existing SATA infrastructure</li>
+<li><strong>PCIe</strong> - High-speed expansion slot connection</li>
+<li><strong>SAS</strong> - Enterprise-grade, hot-swappable</li>
+</ul>
+</li>
+<li><strong>Form Factors</strong><ul>
+<li><strong>M.2</strong> - Small form factor for modern systems</li>
+<li><strong>mSATA</strong> - Mini-SATA for compact devices</li>
+</ul>
+</li>
+</ul>
+<h3 id="drive-configurations">Drive Configurations:<a class="headerlink" href="#drive-configurations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>RAID Arrays</strong><ul>
+<li><strong>RAID 0</strong> - Striping for performance, no redundancy</li>
+<li><strong>RAID 1</strong> - Mirroring for redundancy, slower writes</li>
+<li><strong>RAID 5</strong> - Striping with parity, good balance</li>
+<li><strong>RAID 6</strong> - Dual parity, higher fault tolerance</li>
+<li><strong>RAID 10</strong> - Striped mirrors, best performance + redundancy</li>
+</ul>
+</li>
+</ul>
+<h3 id="removable-storage">Removable Storage:<a class="headerlink" href="#removable-storage" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Flash Drives</strong> - Portable USB storage</li>
+<li><strong>Memory Cards</strong> - SD, microSD for cameras/phones</li>
+</ul>
+<h3 id="optical-drives">Optical Drives:<a class="headerlink" href="#optical-drives" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>CD/DVD/Blu-ray</strong> - Legacy media reading/writing</li>
+</ul>
+<p><em>Key Study Point: Understand the performance hierarchy - NVMe SSD &gt; SATA SSD &gt; 7200 RPM HDD &gt; 5400 RPM HDD. Know RAID levels and their use cases.</em></p>
+<hr />
+<h2 id="35-motherboards-cpus-and-add-on-cards">3.5 Motherboards, CPUs, and Add-on Cards<a class="headerlink" href="#35-motherboards-cpus-and-add-on-cards" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll install and configure motherboard components while understanding compatibility requirements and BIOS/UEFI settings.</p>
+<h3 id="motherboard-form-factors">Motherboard Form Factors:<a class="headerlink" href="#motherboard-form-factors" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ATX</strong> - Full-size, most expansion slots</li>
+<li><strong>microATX</strong> - Smaller, fewer expansion slots</li>
+<li><strong>ITX</strong> - Compact, minimal expansion</li>
+</ul>
+<h3 id="motherboard-connectors">Motherboard Connectors:<a class="headerlink" href="#motherboard-connectors" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PCI</strong> - Legacy expansion slots</li>
+<li><strong>PCIe</strong> - Modern expansion (x1, x4, x8, x16)</li>
+<li><strong>Power Connectors</strong> - 24-pin ATX, 4/8-pin CPU</li>
+<li><strong>SATA/eSATA</strong> - Storage device connections</li>
+<li><strong>Headers</strong> - Front panel, USB, audio connections</li>
+<li><strong>M.2</strong> - High-speed SSD slots</li>
+</ul>
+<h3 id="cpu-compatibility">CPU Compatibility:<a class="headerlink" href="#cpu-compatibility" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Socket Types</strong><ul>
+<li><strong>AMD</strong> - AM4, AM5, TR4 sockets</li>
+<li><strong>Intel</strong> - LGA 1200, LGA 1700 sockets</li>
+</ul>
+</li>
+<li><strong>Multisocket</strong> - Server motherboards with multiple CPU sockets</li>
+</ul>
+<h3 id="biosuefi-settings">BIOS/UEFI Settings:<a class="headerlink" href="#biosuefi-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Boot Options</strong> - Boot order and device selection</li>
+<li><strong>USB Permissions</strong> - Enable/disable USB devices</li>
+<li><strong>TPM Security</strong> - Trusted Platform Module configuration</li>
+<li><strong>Fan Controls</strong> - Temperature-based fan curves</li>
+<li><strong>Secure Boot</strong> - UEFI security feature</li>
+<li><strong>Boot Password</strong> - System startup protection</li>
+<li><strong>BIOS Password</strong> - Setup utility protection</li>
+<li><strong>Temperature Monitoring</strong> - Hardware health tracking</li>
+</ul>
+<h3 id="advanced-features">Advanced Features:<a class="headerlink" href="#advanced-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Virtualization Support</strong> - Intel VT-x, AMD-V</li>
+<li><strong>Encryption</strong> - TPM and HSM security modules</li>
+</ul>
+<h3 id="cpu-architecture">CPU Architecture:<a class="headerlink" href="#cpu-architecture" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>x86/x64</strong> - Intel and AMD desktop/server processors</li>
+<li><strong>ARM</strong> - Mobile and low-power processors</li>
+<li><strong>Core Configurations</strong> - Single, dual, quad, octa-core options</li>
+</ul>
+<h3 id="expansion-cards">Expansion Cards:<a class="headerlink" href="#expansion-cards" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sound Cards</strong> - Enhanced audio processing</li>
+<li><strong>Video Cards</strong> - Graphics processing and display output</li>
+<li><strong>Capture Cards</strong> - Video input and recording</li>
+<li><strong>Network Interface Cards</strong> - Wired and wireless networking</li>
+</ul>
+<h3 id="cooling-solutions">Cooling Solutions:<a class="headerlink" href="#cooling-solutions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Fans</strong> - Case and component cooling</li>
+<li><strong>Heat Sinks</strong> - Passive CPU cooling</li>
+<li><strong>Thermal Paste/Pads</strong> - Heat transfer materials</li>
+<li><strong>Liquid Cooling</strong> - Advanced CPU/GPU cooling</li>
+</ul>
+<p><em>Key Study Point: CPU and motherboard must have matching socket types. Understand BIOS vs UEFI differences and key security settings like Secure Boot and TPM.</em></p>
+<hr />
+<h2 id="36-power-supply-installation">3.6 Power Supply Installation<a class="headerlink" href="#36-power-supply-installation" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll select and install appropriate power supplies based on system requirements and understand power specifications.</p>
+<h3 id="power-supply-specifications">Power Supply Specifications:<a class="headerlink" href="#power-supply-specifications" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Input Voltage</strong><ul>
+<li><strong>110-120 VAC</strong> - North American standard</li>
+<li><strong>220-240 VAC</strong> - International standard</li>
+</ul>
+</li>
+<li><strong>Output Voltages</strong> - 3.3V, 5V, 12V DC rails</li>
+<li><strong>Motherboard Connector</strong> - 20+4 pin main power</li>
+<li><strong>Wattage Rating</strong> - Total power output capacity</li>
+<li><strong>Energy Efficiency</strong> - 80 Plus certification levels</li>
+</ul>
+<h3 id="power-supply-types">Power Supply Types:<a class="headerlink" href="#power-supply-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Redundant PSU</strong> - Backup power supplies for servers</li>
+<li><strong>Modular PSU</strong> - Detachable cables for cable management</li>
+</ul>
+<p><em>Key Study Point: Calculate total system power requirements and add 20% headroom. Understand that modern systems primarily use 12V rail for CPU and graphics cards.</em></p>
+<hr />
+<h2 id="37-multifunction-deviceprinter-deployment">3.7 Multifunction Device/Printer Deployment<a class="headerlink" href="#37-multifunction-deviceprinter-deployment" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll deploy and configure printers in network environments while implementing appropriate security measures.</p>
+<h3 id="deployment-considerations">Deployment Considerations:<a class="headerlink" href="#deployment-considerations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Unboxing and Setup</strong> - Physical installation and location planning</li>
+<li><strong>Driver Installation</strong> - OS-specific printer drivers<ul>
+<li><strong>PCL vs PostScript</strong> - Printer language compatibility</li>
+</ul>
+</li>
+<li><strong>Firmware Updates</strong> - Security and feature improvements</li>
+</ul>
+<h3 id="connectivity-options">Connectivity Options:<a class="headerlink" href="#connectivity-options" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>USB</strong> - Direct computer connection</li>
+<li><strong>Ethernet</strong> - Wired network connection</li>
+<li><strong>Wireless</strong> - Wi-Fi network integration</li>
+</ul>
+<h3 id="network-sharing">Network Sharing:<a class="headerlink" href="#network-sharing" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Printer Share</strong> - Share printer from host computer</li>
+<li><strong>Print Server</strong> - Dedicated network print management</li>
+</ul>
+<h3 id="configuration-settings">Configuration Settings:<a class="headerlink" href="#configuration-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Duplex</strong> - Double-sided printing</li>
+<li><strong>Orientation</strong> - Portrait vs landscape</li>
+<li><strong>Tray Settings</strong> - Paper size and type selection</li>
+<li><strong>Quality Settings</strong> - Draft, normal, high quality modes</li>
+</ul>
+<h3 id="security-features">Security Features:<a class="headerlink" href="#security-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>User Authentication</strong> - Login required for printing</li>
+<li><strong>Badging</strong> - ID card access control</li>
+<li><strong>Audit Logs</strong> - Track printing activity</li>
+<li><strong>Secured Prints</strong> - Release prints with PIN/badge</li>
+</ul>
+<h3 id="network-services">Network Services:<a class="headerlink" href="#network-services" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Email Integration</strong> - Scan-to-email functionality</li>
+<li><strong>SMB Sharing</strong> - Network folder scanning</li>
+<li><strong>Cloud Services</strong> - Direct cloud storage integration</li>
+<li><strong>ADF/Flatbed</strong> - Document feeding options</li>
+</ul>
+<p><em>Key Study Point: Understand the difference between sharing a printer from a computer vs using a dedicated print server. Know security implications of network-connected printers.</em></p>
+<hr />
+<h2 id="38-printer-maintenance">3.8 Printer Maintenance<a class="headerlink" href="#38-printer-maintenance" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll perform appropriate maintenance procedures for different printer types and understand their specific requirements.</p>
+<h3 id="laser-printer-maintenance">Laser Printer Maintenance:<a class="headerlink" href="#laser-printer-maintenance" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Routine Tasks</strong> - Replace toner, apply maintenance kits, calibrate</li>
+<li><strong>Cleaning</strong> - Remove dust and toner residue</li>
+<li><strong>Components</strong> - Imaging drum, fuser, transfer rollers</li>
+</ul>
+<h3 id="inkjet-printer-maintenance">Inkjet Printer Maintenance:<a class="headerlink" href="#inkjet-printer-maintenance" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Components</strong> - Ink cartridges, printheads, paper rollers, feeders</li>
+<li><strong>Routine Tasks</strong> - Clean printheads, replace cartridges, calibrate colors, clear jams</li>
+<li><strong>Issues</strong> - Clogged nozzles, streaking, color mixing</li>
+</ul>
+<h3 id="thermal-printer-maintenance">Thermal Printer Maintenance:<a class="headerlink" href="#thermal-printer-maintenance" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Components</strong> - Feed assembly, special thermal paper</li>
+<li><strong>Routine Tasks</strong> - Replace paper, clean heating element, remove debris</li>
+<li><strong>Requirements</strong> - Heat-sensitive paper, regular cleaning</li>
+</ul>
+<h3 id="impact-printer-maintenance">Impact Printer Maintenance:<a class="headerlink" href="#impact-printer-maintenance" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Components</strong> - Multipart paper, ribbon cartridges</li>
+<li><strong>Routine Tasks</strong> - Replace ribbon, printhead, and paper</li>
+<li><strong>Applications</strong> - Carbon copy forms, receipts</li>
+</ul>
+<p><em>Key Study Point: Each printer type has unique maintenance requirements - lasers need toner and cleaning, inkjets need printhead maintenance, thermal printers need special paper, impact printers need ribbons.</em></p>
+<hr />
+<h2 id="study-tips-for-hardware-domain">Study Tips for Hardware Domain<a class="headerlink" href="#study-tips-for-hardware-domain" title="Permanent link">&para;</a></h2>
+<h3 id="high-priority-topics">High-Priority Topics:<a class="headerlink" href="#high-priority-topics" title="Permanent link">&para;</a></h3>
+<ul>
+<li>RAM compatibility (form factor, generation, ECC vs non-ECC)</li>
+<li>Storage performance hierarchy (NVMe &gt; SATA SSD &gt; HDD)</li>
+<li>Power supply wattage calculations</li>
+<li>Printer maintenance procedures by type</li>
+</ul>
+<h3 id="common-exam-scenarios">Common Exam Scenarios:<a class="headerlink" href="#common-exam-scenarios" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Selecting appropriate RAM for system upgrade</li>
+<li>Choosing storage solution based on performance needs</li>
+<li>Troubleshooting display issues (cable vs display problem)</li>
+<li>Installing motherboard with proper power connections</li>
+<li>Configuring network printer with security settings</li>
+</ul>
+<h3 id="hands-on-practice">Hands-On Practice:<a class="headerlink" href="#hands-on-practice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Install different RAM types and understand compatibility</li>
+<li>Connect various display cables and test resolutions</li>
+<li>Practice motherboard installation and BIOS configuration</li>
+<li>Set up network printers with security features</li>
+<li>Perform maintenance on different printer types</li>
+</ul>
+<h3 id="memory-aids">Memory Aids:<a class="headerlink" href="#memory-aids" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Display Technologies:</strong> "IPS = Image Perfect, TN = Time's Nice (fast), VA = Very Average"</li>
+<li><strong>RAID Levels:</strong> "0 = Zero redundancy, 1 = One copy, 5 = Five drives minimum, 10 = One plus zero"</li>
+<li><strong>Power Rails:</strong> "3.3V and 5V for logic, 12V for motors and high power"</li>
+</ul>
+<hr />
+<p><em>Weight: 25% of Core 1 Exam | Estimated Study Time: 30-35 hours</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../networking/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2.0 Networking">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2.0 Networking
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../virtualization/" class="md-footer__link md-footer__link--next" aria-label="Next: 4.0 Virtualization">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                4.0 Virtualization
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../js/print-button.js"></script>
+      
+    
+  </body>
+</html>
