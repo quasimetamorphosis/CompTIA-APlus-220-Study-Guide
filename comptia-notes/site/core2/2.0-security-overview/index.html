@@ -1,0 +1,2254 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1.0-operating-systems-overview/">
+      
+      
+        <link rel="next" href="../3.0-software-troubleshooting-overview/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>2.0 Security - CompTIA A+ Study Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-button.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#20-security-28-of-core-2-exam" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CompTIA A+ Study Guide" class="md-header__button md-logo" aria-label="CompTIA A+ Study Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CompTIA A+ Study Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2.0 Security
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.55 19.09 1.41 1.41 1.8-1.79-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71 1.8 1.79 1.41-1.41-1.79-1.8M20.45 5l-1.41-1.4-1.8 1.79 1.42 1.42M13 1h-2v3h2M6.76 5.39 4.96 3.6 3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-objectives/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exam Objectives
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../core1/1.0-mobile-devices/" class="md-tabs__link">
+          
+  
+  
+  Core 1
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1.0-operating-systems-overview/" class="md-tabs__link">
+          
+  
+  
+  Core 2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CompTIA A+ Study Guide" class="md-nav__button md-logo" aria-label="CompTIA A+ Study Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CompTIA A+ Study Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam Objectives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    1.0 Mobile Devices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            1.0 Mobile Devices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/1.0-mobile-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/1.0-mobile-devices/1.1-laptop-hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Laptop Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/1.0-mobile-devices/1.2-connecting-mobile-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connecting Devices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/1.0-mobile-devices/1.2-mobile-device-accessories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/1.0-mobile-devices/1.3-mobile-device-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobile Device Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/1.0-mobile-devices/1.3-mobile-device-networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobile Networks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Networking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/virtualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0 Virtualization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core1/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.0 Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Core 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-operating-systems-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 Operating Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    2.0 Security
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Security
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-security-measures-and-their-purposes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Security Measures and Their Purposes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Security Measures and Their Purposes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#physical-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physical Security:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-access-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physical Access Security:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Security:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-microsoft-windows-os-security-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Microsoft Windows OS Security Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Microsoft Windows OS Security Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#antivirus-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antivirus Protection:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Configuration:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-account-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Account Management:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Options:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-system-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      File System Security:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-account-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Account Control:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encryption Technologies:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-directory-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Active Directory Integration:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-wireless-security-protocols-and-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Wireless Security Protocols and Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Wireless Security Protocols and Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wireless-security-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wireless Security Protocols:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encryption Methods:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enterprise-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise Authentication:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-malware-types-and-detectionprevention" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Malware Types and Detection/Prevention
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Malware Types and Detection/Prevention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-malware-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Malware Types:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adware-category" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adware Category:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-and-response-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detection and Response Tools:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevention-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prevention Methods:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-social-engineering-attacks-threats-and-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Social Engineering Attacks, Threats, and Vulnerabilities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Social Engineering Attacks, Threats, and Vulnerabilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#social-engineering-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social Engineering Techniques:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-threats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Threats:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Vulnerabilities:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-soho-malware-removal-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 SOHO Malware Removal Procedures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 SOHO Malware Removal Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10-step-malware-removal-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      10-Step Malware Removal Process:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-workstation-security-and-hardening" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 Workstation Security and Hardening
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 Workstation Security and Hardening">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Protection:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Security:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Security:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-hardening" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Hardening:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Best Practices:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-mobile-device-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 Mobile Device Security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8 Mobile Device Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device-hardening" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device Hardening:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Management:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-management-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device Management Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corporate-mobile-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corporate Mobile Policies:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-data-destruction-and-disposal-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 Data Destruction and Disposal Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.9 Data Destruction and Disposal Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#physical-destruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physical Destruction:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-sanitization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Sanitization:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outsourcing-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outsourcing Considerations:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance Requirements:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-soho-network-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10 SOHO Network Security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.10 SOHO Network Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#router-security-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router Security Settings:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wireless-specific-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wireless-Specific Security:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Configuration:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-browser-security-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.11 Browser Security Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.11 Browser Security Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browser-installation-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Browser Installation Security:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension-and-plugin-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extension and Plugin Management:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privacy-and-security-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy and Security Settings:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browser-feature-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Browser Feature Management:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-tips-for-security-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Study Tips for Security Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Study Tips for Security Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-priority-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Priority Concepts:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-exam-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Exam Scenarios:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-principles-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Principles to Remember:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memorization-aids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memorization Aids:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands-On Practice:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-technology-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Technology Trends:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.0-software-troubleshooting-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Software Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="20-security-28-of-core-2-exam">2.0 Security (28% of Core 2 Exam)<a class="headerlink" href="#20-security-28-of-core-2-exam" title="Permanent link">&para;</a></h1>
+<p><em>Focus: Understanding physical and logical security measures, Windows security settings, wireless security, malware prevention, social engineering, security procedures, and data protection methods</em></p>
+<hr />
+<h2 id="21-security-measures-and-their-purposes">2.1 Security Measures and Their Purposes<a class="headerlink" href="#21-security-measures-and-their-purposes" title="Permanent link">&para;</a></h2>
+<p><strong>Summary Focus:</strong> You'll identify appropriate security controls for different scenarios and understand layered security approaches.</p>
+<h3 id="physical-security">Physical Security:<a class="headerlink" href="#physical-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Perimeter Controls</strong><ul>
+<li><strong>Bollards</strong> - Vehicle barriers to prevent ramming attacks</li>
+<li><strong>Fences</strong> - Boundary markers and deterrents</li>
+<li><strong>Security Guards</strong> - Human oversight and response</li>
+</ul>
+</li>
+<li><strong>Building Access Controls</strong><ul>
+<li><strong>Access Control Vestibule</strong> - Mantrap preventing tailgating</li>
+<li><strong>Badge Readers</strong> - Electronic access control systems</li>
+<li><strong>Door Locks</strong> - Physical barriers (mechanical, electronic, smart)</li>
+<li><strong>Equipment Locks</strong> - Cable locks, laptop locks, server cage locks</li>
+</ul>
+</li>
+<li><strong>Monitoring Systems</strong><ul>
+<li><strong>Video Surveillance</strong> - CCTV monitoring and recording</li>
+<li><strong>Alarm Systems</strong> - Intrusion detection and alerts</li>
+<li><strong>Motion Sensors</strong> - Automated detection of movement</li>
+<li><strong>Lighting</strong> - Deterrent and visibility for surveillance</li>
+<li><strong>Magnetometers</strong> - Metal detection for weapons</li>
+</ul>
+</li>
+</ul>
+<h3 id="physical-access-security">Physical Access Security:<a class="headerlink" href="#physical-access-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Traditional Methods</strong><ul>
+<li><strong>Keys</strong> - Physical metal keys for locks</li>
+<li><strong>Key Fobs</strong> - Electronic proximity tokens</li>
+<li><strong>Smart Cards</strong> - Chip-based authentication cards</li>
+<li><strong>Mobile Digital Keys</strong> - Smartphone-based access</li>
+</ul>
+</li>
+<li><strong>Biometric Authentication</strong><ul>
+<li><strong>Retina Scanner</strong> - Eye pattern recognition</li>
+<li><strong>Fingerprint Scanner</strong> - Fingerprint pattern matching</li>
+<li><strong>Palm Print Scanner</strong> - Hand geometry recognition</li>
+<li><strong>Facial Recognition Technology (FRT)</strong> - Face pattern analysis</li>
+<li><strong>Voice Recognition</strong> - Vocal pattern identification</li>
+</ul>
+</li>
+</ul>
+<h3 id="logical-security">Logical Security:<a class="headerlink" href="#logical-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Access Control Principles</strong><ul>
+<li><strong>Principle of Least Privilege</strong> - Minimum necessary access rights</li>
+<li><strong>Zero Trust Model</strong> - Never trust, always verify approach</li>
+<li><strong>Access Control Lists (ACLs)</strong> - Granular permission management</li>
+</ul>
+</li>
+<li><strong>Authentication Methods</strong><ul>
+<li><strong>Multifactor Authentication (MFA)</strong> - Multiple authentication factors<ul>
+<li><strong>Email</strong> - Verification codes sent to email</li>
+<li><strong>Hardware Token</strong> - Physical authentication device</li>
+<li><strong>Authenticator App</strong> - Software-based code generation</li>
+<li><strong>SMS</strong> - Text message verification codes</li>
+<li><strong>Voice Call</strong> - Automated phone verification</li>
+<li><strong>TOTP</strong> - Time-based One-Time Password</li>
+<li><strong>OTP</strong> - One-Time Password/Passcode</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Enterprise Authentication</strong><ul>
+<li><strong>SAML</strong> - Security Assertions Markup Language for SSO</li>
+<li><strong>SSO</strong> - Single Sign-On across multiple systems</li>
+<li><strong>Just-in-Time Access</strong> - Temporary privilege elevation</li>
+<li><strong>PAM</strong> - Privileged Access Management for admin accounts</li>
+</ul>
+</li>
+<li><strong>Data Protection</strong><ul>
+<li><strong>MDM</strong> - Mobile Device Management for corporate devices</li>
+<li><strong>DLP</strong> - Data Loss Prevention to prevent data leakage</li>
+<li><strong>IAM</strong> - Identity Access Management for user lifecycle</li>
+<li><strong>Directory Services</strong> - Centralized authentication (Active Directory)</li>
+</ul>
+</li>
+</ul>
+<p><em>Key Study Point: Physical security provides the foundation - if someone has physical access, other security measures can be bypassed. Multifactor authentication significantly improves security over passwords alone.</em></p>
+<hr />
+<h2 id="22-microsoft-windows-os-security-settings">2.2 Microsoft Windows OS Security Settings<a class="headerlink" href="#22-microsoft-windows-os-security-settings" title="Permanent link">&para;</a></h2>
+<p><strong>Configuration Focus:</strong> You'll implement Windows security features and configure user access controls while understanding encryption and domain integration.</p>
+<h3 id="antivirus-protection">Antivirus Protection:<a class="headerlink" href="#antivirus-protection" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Windows Defender Antivirus</strong><ul>
+<li><strong>Activate/Deactivate</strong> - Enable or disable real-time protection</li>
+<li><strong>Update Definitions</strong> - Keep virus signatures current</li>
+</ul>
+</li>
+</ul>
+<h3 id="firewall-configuration">Firewall Configuration:<a class="headerlink" href="#firewall-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Windows Defender Firewall</strong><ul>
+<li><strong>Activate/Deactivate</strong> - Enable or disable firewall protection</li>
+<li><strong>Port Security</strong> - Control which network ports are open</li>
+<li><strong>Application Security</strong> - Allow or block specific programs</li>
+</ul>
+</li>
+</ul>
+<h3 id="user-account-management">User Account Management:<a class="headerlink" href="#user-account-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Account Types</strong><ul>
+<li><strong>Local Account</strong> - Stored on individual computer</li>
+<li><strong>Microsoft Account</strong> - Cloud-based authentication</li>
+<li><strong>Standard Account</strong> - Limited system access</li>
+<li><strong>Administrator</strong> - Full system control</li>
+<li><strong>Guest User</strong> - Temporary limited access (usually disabled)</li>
+<li><strong>Power User</strong> - Enhanced privileges without full admin rights</li>
+</ul>
+</li>
+</ul>
+<h3 id="authentication-options">Authentication Options:<a class="headerlink" href="#authentication-options" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Username and Password</strong> - Traditional text-based login</li>
+<li><strong>PIN</strong> - Numeric password for convenience</li>
+<li><strong>Fingerprint</strong> - Biometric authentication</li>
+<li><strong>Facial Recognition</strong> - Windows Hello face authentication</li>
+<li><strong>SSO</strong> - Single sign-on integration</li>
+<li><strong>Passwordless/Windows Hello</strong> - Modern authentication without passwords</li>
+</ul>
+<h3 id="file-system-security">File System Security:<a class="headerlink" href="#file-system-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>NTFS vs Share Permissions</strong><ul>
+<li><strong>NTFS Permissions</strong> - File system level security (local and network)</li>
+<li><strong>Share Permissions</strong> - Network access control only</li>
+<li><strong>File and Folder Attributes</strong> - Hidden, system, read-only properties</li>
+<li><strong>Inheritance</strong> - Child objects inherit parent permissions</li>
+</ul>
+</li>
+<li><strong>Permission Hierarchy</strong> - NTFS permissions override share permissions</li>
+</ul>
+<h3 id="user-account-control">User Account Control:<a class="headerlink" href="#user-account-control" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>UAC</strong> - User Account Control prevents unauthorized system changes</li>
+<li><strong>Run as Administrator</strong> - Temporary privilege elevation</li>
+<li><strong>Standard User</strong> - Default limited permissions for safety</li>
+</ul>
+<h3 id="encryption-technologies">Encryption Technologies:<a class="headerlink" href="#encryption-technologies" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>BitLocker</strong> - Full disk encryption for fixed drives</li>
+<li><strong>BitLocker To Go</strong> - Encryption for removable drives (USB, external HDD)</li>
+<li><strong>EFS</strong> - Encrypting File System for individual files and folders</li>
+</ul>
+<h3 id="active-directory-integration">Active Directory Integration:<a class="headerlink" href="#active-directory-integration" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Domain Management</strong><ul>
+<li><strong>Joining Domain</strong> - Connect computer to enterprise network</li>
+<li><strong>Login Scripts</strong> - Automated tasks at user login</li>
+<li><strong>Organizational Units</strong> - Logical grouping of domain objects</li>
+<li><strong>Home Folders</strong> - Centralized user storage</li>
+<li><strong>Group Policy</strong> - Centralized configuration management</li>
+<li><strong>Security Groups</strong> - Collections of users with similar access needs</li>
+<li><strong>Folder Redirection</strong> - Redirect user folders to network storage</li>
+</ul>
+</li>
+</ul>
+<p><em>Key Study Point: NTFS permissions are more granular than share permissions. BitLocker encrypts entire drives, EFS encrypts individual files. UAC prevents malware from making system changes.</em></p>
+<hr />
+<h2 id="23-wireless-security-protocols-and-authentication">2.3 Wireless Security Protocols and Authentication<a class="headerlink" href="#23-wireless-security-protocols-and-authentication" title="Permanent link">&para;</a></h2>
+<p><strong>Comparison Focus:</strong> You'll select appropriate wireless security protocols and authentication methods based on security requirements and compatibility needs.</p>
+<h3 id="wireless-security-protocols">Wireless Security Protocols:<a class="headerlink" href="#wireless-security-protocols" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>WPA2 (Wi-Fi Protected Access 2)</strong><ul>
+<li>Current standard for most networks</li>
+<li>Strong security when properly configured</li>
+<li>Vulnerable to certain advanced attacks</li>
+</ul>
+</li>
+<li><strong>WPA3</strong> - Latest wireless security standard<ul>
+<li>Enhanced security features</li>
+<li>Better protection against password attacks</li>
+<li>Required for Wi-Fi 6 certification</li>
+</ul>
+</li>
+</ul>
+<h3 id="encryption-methods">Encryption Methods:<a class="headerlink" href="#encryption-methods" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>TKIP (Temporal Key Integrity Protocol)</strong><ul>
+<li>Legacy encryption method</li>
+<li>Deprecated due to security vulnerabilities</li>
+<li>Should not be used in new implementations</li>
+</ul>
+</li>
+<li><strong>AES (Advanced Encryption Standard)</strong><ul>
+<li>Strong encryption algorithm</li>
+<li>Current recommended encryption method</li>
+<li>Used in WPA2 and WPA3</li>
+</ul>
+</li>
+</ul>
+<h3 id="enterprise-authentication">Enterprise Authentication:<a class="headerlink" href="#enterprise-authentication" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>RADIUS</strong> - Remote Authentication Dial-in User Service<ul>
+<li>Centralized authentication server</li>
+<li>Supports multiple authentication methods</li>
+</ul>
+</li>
+<li><strong>TACACS+</strong> - Terminal Access Controller Access-Control System Plus<ul>
+<li>Alternative to RADIUS</li>
+<li>Separates authentication, authorization, and accounting</li>
+</ul>
+</li>
+<li><strong>Kerberos</strong> - Network authentication protocol<ul>
+<li>Ticket-based authentication</li>
+<li>Mutual authentication between client and server</li>
+</ul>
+</li>
+<li><strong>Multifactor Authentication</strong> - Additional security layers beyond passwords</li>
+</ul>
+<p><em>Key Study Point: WPA3 is the most secure wireless protocol. AES encryption is preferred over TKIP. Enterprise networks should use RADIUS or TACACS+ for centralized authentication.</em></p>
+<hr />
+<h2 id="24-malware-types-and-detectionprevention">2.4 Malware Types and Detection/Prevention<a class="headerlink" href="#24-malware-types-and-detectionprevention" title="Permanent link">&para;</a></h2>
+<p><strong>Summary Focus:</strong> You'll identify different types of malicious software and understand appropriate tools and methods for detection, removal, and prevention.</p>
+<h3 id="common-malware-types">Common Malware Types:<a class="headerlink" href="#common-malware-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trojan</strong> - Disguised as legitimate software, provides backdoor access</li>
+<li><strong>Rootkit</strong> - Hides deep in system, difficult to detect and remove</li>
+<li><strong>Virus</strong> - Self-replicating code that infects other files</li>
+<li><strong>Spyware</strong> - Secretly monitors and reports user activities</li>
+<li><strong>Ransomware</strong> - Encrypts data and demands payment for decryption</li>
+<li><strong>Keylogger</strong> - Records keystrokes to steal passwords and data</li>
+<li><strong>Boot Sector Virus</strong> - Infects master boot record, loads before OS</li>
+<li><strong>Cryptominer</strong> - Uses system resources to mine cryptocurrency</li>
+<li><strong>Stalkerware</strong> - Monitors personal communications and location</li>
+<li><strong>Fileless Malware</strong> - Operates in memory without writing files to disk</li>
+</ul>
+<h3 id="adware-category">Adware Category:<a class="headerlink" href="#adware-category" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Adware</strong> - Displays unwanted advertisements</li>
+<li><strong>PUP (Potentially Unwanted Program)</strong> - Software with questionable value</li>
+</ul>
+<h3 id="detection-and-response-tools">Detection and Response Tools:<a class="headerlink" href="#detection-and-response-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Recovery Console</strong> - Safe mode environment for malware removal</li>
+<li><strong>EDR (Endpoint Detection and Response)</strong> - Advanced threat detection</li>
+<li><strong>MDR (Managed Detection and Response)</strong> - Outsourced security monitoring</li>
+<li><strong>XDR (Extended Detection and Response)</strong> - Comprehensive security platform</li>
+<li><strong>Traditional Protection</strong><ul>
+<li><strong>Antivirus</strong> - Signature-based malware detection</li>
+<li><strong>Anti-malware</strong> - Broader protection including behavior analysis</li>
+<li><strong>Email Security Gateway</strong> - Blocks malicious emails at server level</li>
+<li><strong>Software Firewalls</strong> - Host-based network protection</li>
+</ul>
+</li>
+</ul>
+<h3 id="prevention-methods">Prevention Methods:<a class="headerlink" href="#prevention-methods" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>User Education</strong> - Training users to recognize threats<ul>
+<li><strong>Anti-phishing Training</strong> - Recognize and avoid phishing attempts</li>
+</ul>
+</li>
+<li><strong>OS Reinstallation</strong> - Complete system rebuild for severe infections</li>
+</ul>
+<p><em>Key Study Point: Ransomware is one of the most dangerous threats. EDR/MDR/XDR provide advanced protection beyond traditional antivirus. User education is critical for prevention.</em></p>
+<hr />
+<h2 id="25-social-engineering-attacks-threats-and-vulnerabilities">2.5 Social Engineering Attacks, Threats, and Vulnerabilities<a class="headerlink" href="#25-social-engineering-attacks-threats-and-vulnerabilities" title="Permanent link">&para;</a></h2>
+<p><strong>Comparison Focus:</strong> You'll identify social engineering tactics and technical threats while understanding system vulnerabilities that enable attacks.</p>
+<h3 id="social-engineering-techniques">Social Engineering Techniques:<a class="headerlink" href="#social-engineering-techniques" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Phishing Attacks</strong><ul>
+<li><strong>Phishing</strong> - Generic fraudulent emails requesting information</li>
+<li><strong>Vishing</strong> - Voice-based phishing over phone calls</li>
+<li><strong>Smishing</strong> - SMS/text message phishing</li>
+<li><strong>QR Code Phishing</strong> - Malicious QR codes directing to fake sites</li>
+<li><strong>Spear Phishing</strong> - Targeted phishing against specific individuals</li>
+<li><strong>Whaling</strong> - Phishing targeting high-level executives</li>
+</ul>
+</li>
+<li><strong>Physical Manipulation</strong><ul>
+<li><strong>Shoulder Surfing</strong> - Observing passwords or sensitive information</li>
+<li><strong>Tailgating</strong> - Following authorized person through secure door</li>
+<li><strong>Impersonation</strong> - Pretending to be someone with authority</li>
+<li><strong>Dumpster Diving</strong> - Searching trash for sensitive information</li>
+</ul>
+</li>
+</ul>
+<h3 id="technical-threats">Technical Threats:<a class="headerlink" href="#technical-threats" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Network Attacks</strong><ul>
+<li><strong>DoS (Denial of Service)</strong> - Overwhelm system to cause downtime</li>
+<li><strong>DDoS (Distributed Denial of Service)</strong> - DoS from multiple sources</li>
+<li><strong>Evil Twin</strong> - Fake wireless access point mimicking legitimate one</li>
+<li><strong>On-Path Attack</strong> - Intercepting communication between parties</li>
+<li><strong>Spoofing</strong> - Impersonating trusted network entities</li>
+</ul>
+</li>
+<li><strong>Password Attacks</strong><ul>
+<li><strong>Brute-Force Attack</strong> - Systematic password guessing</li>
+<li><strong>Dictionary Attack</strong> - Using common passwords and word lists</li>
+</ul>
+</li>
+<li><strong>Advanced Threats</strong><ul>
+<li><strong>Zero-Day Attack</strong> - Exploiting unknown vulnerabilities</li>
+<li><strong>Insider Threat</strong> - Malicious actions by authorized users</li>
+<li><strong>Supply Chain Attack</strong> - Compromising software/hardware before delivery</li>
+</ul>
+</li>
+<li><strong>Web Application Attacks</strong><ul>
+<li><strong>SQL Injection</strong> - Malicious database queries through web forms</li>
+<li><strong>XSS (Cross-Site Scripting)</strong> - Injecting malicious scripts into websites</li>
+<li><strong>BEC (Business Email Compromise)</strong> - CEO fraud and invoice scams</li>
+</ul>
+</li>
+</ul>
+<h3 id="system-vulnerabilities">System Vulnerabilities:<a class="headerlink" href="#system-vulnerabilities" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Maintenance Issues</strong><ul>
+<li><strong>Non-Compliant Systems</strong> - Systems not meeting security standards</li>
+<li><strong>Unpatched Systems</strong> - Missing security updates</li>
+<li><strong>Unprotected Systems</strong> - Missing antivirus or firewall protection</li>
+<li><strong>EOL Systems</strong> - End-of-life systems without support</li>
+</ul>
+</li>
+<li><strong>Policy Vulnerabilities</strong><ul>
+<li><strong>BYOD</strong> - Bring Your Own Device security challenges</li>
+</ul>
+</li>
+</ul>
+<p><em>Key Study Point: Social engineering targets human weaknesses, not technical ones. Phishing is the most common attack vector. Keep systems patched and protected to prevent technical exploitation.</em></p>
+<hr />
+<h2 id="26-soho-malware-removal-procedures">2.6 SOHO Malware Removal Procedures<a class="headerlink" href="#26-soho-malware-removal-procedures" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll follow systematic procedures to safely remove malware from small office/home office environments.</p>
+<h3 id="10-step-malware-removal-process">10-Step Malware Removal Process:<a class="headerlink" href="#10-step-malware-removal-process" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Investigate and Verify Malware Symptoms</strong></p>
+<ul>
+<li>Document unusual behavior, slow performance, pop-ups</li>
+<li>Verify infection before proceeding</li>
+<li>
+<p><strong>Quarantine Infected System</strong></p>
+</li>
+<li>
+<p>Disconnect from network to prevent spread</p>
+</li>
+<li>Isolate system from other computers</li>
+<li>
+<p><strong>Disable System Restore in Windows</strong></p>
+</li>
+<li>
+<p>Prevent malware from hiding in restore points</p>
+</li>
+<li>Clear existing restore points that may contain malware</li>
+<li>
+<p><strong>Remediate Infected Systems</strong></p>
+</li>
+<li>
+<p>Update anti-malware software</p>
+</li>
+<li>Run full system scans</li>
+<li>
+<p><strong>Update Anti-Malware Software</strong></p>
+</li>
+<li>
+<p>Download latest virus definitions</p>
+</li>
+<li>Ensure all security tools are current</li>
+<li>
+<p><strong>Scan and Removal Techniques</strong></p>
+</li>
+<li>
+<p><strong>Safe Mode</strong> - Boot with minimal drivers loaded</p>
+</li>
+<li><strong>Preinstallation Environment</strong> - Boot from external media</li>
+<li>Multiple scanning tools for thorough cleaning</li>
+<li>
+<p><strong>Reimage/Reinstall</strong></p>
+</li>
+<li>
+<p>Complete system rebuild if cleaning fails</p>
+</li>
+<li>Restore from clean backup or fresh installation</li>
+<li>
+<p><strong>Schedule Scans and Run Updates</strong></p>
+</li>
+<li>
+<p>Configure automatic scanning</p>
+</li>
+<li>Enable automatic updates</li>
+<li>
+<p><strong>Enable System Restore and Create Restore Point</strong></p>
+</li>
+<li>
+<p>Re-enable System Restore after cleaning</p>
+</li>
+<li>Create clean restore point</li>
+<li>
+<p><strong>Educate the End User</strong></p>
+</li>
+<li>
+<p>Explain how infection occurred</p>
+</li>
+<li>Provide guidance on safe computing practices</li>
+</ul>
+</li>
+</ol>
+<p><em>Key Study Point: Always quarantine infected systems first to prevent spread. Safe mode scanning bypasses malware that loads with Windows. User education prevents reinfection.</em></p>
+<hr />
+<h2 id="27-workstation-security-and-hardening">2.7 Workstation Security and Hardening<a class="headerlink" href="#27-workstation-security-and-hardening" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll implement security controls to protect workstations from threats and unauthorized access.</p>
+<h3 id="data-protection">Data Protection:<a class="headerlink" href="#data-protection" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Data-at-Rest Encryption</strong> - Protect stored data with encryption</li>
+</ul>
+<h3 id="password-security">Password Security:<a class="headerlink" href="#password-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Password Considerations</strong><ul>
+<li><strong>Length</strong> - Longer passwords are exponentially stronger</li>
+<li><strong>Character Types</strong> - Mix uppercase, lowercase, numbers, symbols</li>
+<li><strong>Uniqueness</strong> - Different passwords for different accounts</li>
+<li><strong>Complexity</strong> - Avoid predictable patterns and dictionary words</li>
+<li><strong>Expiration</strong> - Regular password changes (controversial practice)</li>
+</ul>
+</li>
+</ul>
+<h3 id="system-security">System Security:<a class="headerlink" href="#system-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>BIOS/UEFI Passwords</strong> - Prevent unauthorized system changes</li>
+<li><strong>Account Management</strong><ul>
+<li><strong>Restrict User Permissions</strong> - Principle of least privilege</li>
+<li><strong>Restrict Login Times</strong> - Limit when users can access systems</li>
+<li><strong>Disable Guest Account</strong> - Remove unnecessary access</li>
+<li><strong>Failed Attempts Lockout</strong> - Lock accounts after failed login attempts</li>
+<li><strong>Timeout/Screen Lock</strong> - Automatic locking after inactivity</li>
+<li><strong>Account Expiration</strong> - Automatic account deactivation</li>
+</ul>
+</li>
+<li><strong>Administrative Security</strong><ul>
+<li><strong>Change Default Administrator Account</strong> - Rename and secure admin accounts</li>
+<li><strong>Change Default Passwords</strong> - Replace vendor default passwords</li>
+</ul>
+</li>
+</ul>
+<h3 id="system-hardening">System Hardening:<a class="headerlink" href="#system-hardening" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Disable AutoRun</strong> - Prevent automatic execution from removable media</li>
+<li><strong>Disable Unused Services</strong> - Reduce attack surface</li>
+</ul>
+<h3 id="user-best-practices">User Best Practices:<a class="headerlink" href="#user-best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Screensaver Locks</strong> - Automatic screen locking when idle</li>
+<li><strong>Log Off When Not in Use</strong> - Proper session termination</li>
+<li><strong>Secure Critical Hardware</strong> - Physical protection for laptops and devices</li>
+<li><strong>Protect PII and Passwords</strong> - Secure handling of sensitive information</li>
+<li><strong>Password Managers</strong> - Tools for secure password storage and generation</li>
+</ul>
+<p><em>Key Study Point: Password length is more important than complexity. Disable unnecessary services and features. User education and good habits are essential for security.</em></p>
+<hr />
+<h2 id="28-mobile-device-security">2.8 Mobile Device Security<a class="headerlink" href="#28-mobile-device-security" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll implement security controls specific to mobile devices while balancing security with usability.</p>
+<h3 id="device-hardening">Device Hardening:<a class="headerlink" href="#device-hardening" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Device Encryption</strong> - Full device storage encryption</li>
+<li><strong>Screen Lock Types</strong><ul>
+<li><strong>Facial Recognition</strong> - Biometric face unlock</li>
+<li><strong>PIN Codes</strong> - Numeric passcodes</li>
+<li><strong>Fingerprint</strong> - Biometric fingerprint unlock</li>
+<li><strong>Pattern</strong> - Gesture-based unlocking</li>
+<li><strong>Swipe</strong> - Simple swipe to unlock (least secure)</li>
+</ul>
+</li>
+<li><strong>Configuration Profiles</strong> - Centralized device configuration management</li>
+</ul>
+<h3 id="software-management">Software Management:<a class="headerlink" href="#software-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Patch Management</strong><ul>
+<li><strong>OS Updates</strong> - Operating system security patches</li>
+<li><strong>Application Updates</strong> - App security and feature updates</li>
+</ul>
+</li>
+<li><strong>Security Software</strong><ul>
+<li><strong>Antivirus</strong> - Mobile antivirus applications</li>
+<li><strong>Anti-malware</strong> - Broader protection for mobile threats</li>
+<li><strong>Content Filtering</strong> - Block inappropriate or malicious content</li>
+</ul>
+</li>
+</ul>
+<h3 id="device-management-features">Device Management Features:<a class="headerlink" href="#device-management-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Locator Applications</strong> - Find lost or stolen devices</li>
+<li><strong>Remote Wipes</strong> - Erase device data remotely if compromised</li>
+<li><strong>Remote Backup Applications</strong> - Automatic cloud backup</li>
+<li><strong>Failed Login Restrictions</strong> - Lock device after failed attempts</li>
+</ul>
+<h3 id="corporate-mobile-policies">Corporate Mobile Policies:<a class="headerlink" href="#corporate-mobile-policies" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>MDM (Mobile Device Management)</strong> - Enterprise mobile device control</li>
+<li><strong>BYOD vs Corporate-Owned</strong><ul>
+<li><strong>BYOD</strong> - Personal devices accessing corporate data</li>
+<li><strong>Corporate-Owned</strong> - Company-managed devices</li>
+</ul>
+</li>
+<li><strong>Profile Security Requirements</strong> - Minimum security standards</li>
+</ul>
+<p><em>Key Study Point: Mobile devices need different security approaches than desktops. Remote wipe capability is essential for lost/stolen devices. BYOD requires balancing security with privacy.</em></p>
+<hr />
+<h2 id="29-data-destruction-and-disposal-methods">2.9 Data Destruction and Disposal Methods<a class="headerlink" href="#29-data-destruction-and-disposal-methods" title="Permanent link">&para;</a></h2>
+<p><strong>Comparison Focus:</strong> You'll select appropriate data destruction methods based on security requirements and regulatory compliance.</p>
+<h3 id="physical-destruction">Physical Destruction:<a class="headerlink" href="#physical-destruction" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Drilling</strong> - Physical holes through storage media</li>
+<li><strong>Shredding</strong> - Mechanical destruction into small pieces</li>
+<li><strong>Degaussing</strong> - Magnetic field destruction (magnetic media only)</li>
+<li><strong>Incineration</strong> - Complete destruction through burning</li>
+</ul>
+<h3 id="data-sanitization">Data Sanitization:<a class="headerlink" href="#data-sanitization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Erasing/Wiping</strong> - Overwriting data multiple times</li>
+<li><strong>Low-Level Formatting</strong> - Reinitializing storage at hardware level</li>
+<li><strong>Standard Formatting</strong> - File system recreation (least secure)</li>
+</ul>
+<h3 id="outsourcing-considerations">Outsourcing Considerations:<a class="headerlink" href="#outsourcing-considerations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Third-Party Vendors</strong> - Professional destruction services</li>
+<li><strong>Certification of Destruction</strong> - Documented proof of secure disposal</li>
+<li><strong>Chain of Custody</strong> - Tracking throughout disposal process</li>
+</ul>
+<h3 id="compliance-requirements">Compliance Requirements:<a class="headerlink" href="#compliance-requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Regulatory Requirements</strong> - Legal mandates for data destruction</li>
+<li><strong>Environmental Requirements</strong> - Proper disposal of electronic waste</li>
+</ul>
+<p><em>Key Study Point: Physical destruction is most secure but may not be environmentally friendly. Data wiping can be sufficient for most business needs. Always get certificates of destruction for compliance.</em></p>
+<hr />
+<h2 id="210-soho-network-security">2.10 SOHO Network Security<a class="headerlink" href="#210-soho-network-security" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll secure small office/home office networks by configuring routers and wireless access points with appropriate security settings.</p>
+<h3 id="router-security-settings">Router Security Settings:<a class="headerlink" href="#router-security-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Change Default Passwords</strong> - Replace vendor default credentials</li>
+<li><strong>IP Filtering</strong> - Allow or block specific IP addresses</li>
+<li><strong>Firmware Updates</strong> - Keep router software current</li>
+<li><strong>Content Filtering</strong> - Block inappropriate or malicious websites</li>
+<li><strong>Physical Placement</strong> - Secure router in protected location</li>
+<li><strong>UPnP Management</strong> - Disable if not needed (security risk)</li>
+<li><strong>Screened Subnet</strong> - DMZ configuration for exposed services</li>
+<li><strong>Secure Management Access</strong> - HTTPS, SSH for router administration</li>
+</ul>
+<h3 id="wireless-specific-security">Wireless-Specific Security:<a class="headerlink" href="#wireless-specific-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SSID Management</strong><ul>
+<li><strong>Change Default SSID</strong> - Don't advertise router brand/model</li>
+<li><strong>Disable SSID Broadcast</strong> - Hide network name (security through obscurity)</li>
+</ul>
+</li>
+<li><strong>Encryption Settings</strong> - WPA3 preferred, WPA2 minimum</li>
+<li><strong>Guest Network</strong> - Separate network for visitors</li>
+</ul>
+<h3 id="firewall-configuration_1">Firewall Configuration:<a class="headerlink" href="#firewall-configuration_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Disable Unused Ports</strong> - Close unnecessary network ports</li>
+<li><strong>Port Forwarding/Mapping</strong> - Carefully configure external access</li>
+</ul>
+<p><em>Key Study Point: Change all default settings on SOHO equipment. Use WPA3 encryption when available. Keep firmware updated to patch security vulnerabilities.</em></p>
+<hr />
+<h2 id="211-browser-security-settings">2.11 Browser Security Settings<a class="headerlink" href="#211-browser-security-settings" title="Permanent link">&para;</a></h2>
+<p><strong>Configuration Focus:</strong> You'll configure web browsers to protect against online threats while maintaining functionality.</p>
+<h3 id="browser-installation-security">Browser Installation Security:<a class="headerlink" href="#browser-installation-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trusted Sources</strong> - Download from official websites<ul>
+<li><strong>Hashing</strong> - Verify file integrity using checksums</li>
+</ul>
+</li>
+<li><strong>Untrusted Sources</strong> - Avoid third-party download sites</li>
+<li><strong>Browser Patching</strong> - Keep browser updated with security patches</li>
+</ul>
+<h3 id="extension-and-plugin-management">Extension and Plugin Management:<a class="headerlink" href="#extension-and-plugin-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trusted Sources</strong> - Official browser stores and verified developers</li>
+<li><strong>Untrusted Sources</strong> - Avoid sideloaded or unofficial extensions</li>
+</ul>
+<h3 id="security-features">Security Features:<a class="headerlink" href="#security-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Password Managers</strong> - Built-in or third-party password management</li>
+<li><strong>Secure Connections</strong> - HTTPS enforcement and valid certificates</li>
+<li><strong>Certificate Validation</strong> - Verify website authenticity</li>
+</ul>
+<h3 id="privacy-and-security-settings">Privacy and Security Settings:<a class="headerlink" href="#privacy-and-security-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pop-up Blocker</strong> - Prevent malicious pop-up windows</li>
+<li><strong>Clear Browsing Data</strong> - Remove stored cookies and cache</li>
+<li><strong>Clear Cache</strong> - Remove temporary internet files</li>
+<li><strong>Private Browsing Mode</strong> - Browse without storing history</li>
+<li><strong>Browser Data Sync</strong> - Synchronize settings across devices</li>
+<li><strong>Ad Blockers</strong> - Block potentially malicious advertisements</li>
+<li><strong>Proxy Configuration</strong> - Route traffic through proxy servers</li>
+<li><strong>Secure DNS</strong> - Use encrypted DNS services</li>
+</ul>
+<h3 id="browser-feature-management">Browser Feature Management:<a class="headerlink" href="#browser-feature-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Enable/Disable Controls</strong><ul>
+<li><strong>Plugins</strong> - Flash, Java, and other browser plugins</li>
+<li><strong>Extensions</strong> - Third-party browser add-ons</li>
+<li><strong>Features</strong> - JavaScript, cookies, and other browser capabilities</li>
+</ul>
+</li>
+</ul>
+<p><em>Key Study Point: Keep browsers updated and use official sources for downloads. Enable security features like pop-up blockers and HTTPS enforcement. Be cautious with browser extensions.</em></p>
+<hr />
+<h2 id="study-tips-for-security-domain">Study Tips for Security Domain<a class="headerlink" href="#study-tips-for-security-domain" title="Permanent link">&para;</a></h2>
+<h3 id="high-priority-concepts">High-Priority Concepts:<a class="headerlink" href="#high-priority-concepts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Malware removal procedures</strong> (10-step process)</li>
+<li><strong>Windows security features</strong> (BitLocker, UAC, NTFS permissions)</li>
+<li><strong>Wireless security protocols</strong> (WPA2/WPA3, AES encryption)</li>
+<li><strong>Social engineering recognition</strong> (phishing types and prevention)</li>
+</ul>
+<h3 id="common-exam-scenarios">Common Exam Scenarios:<a class="headerlink" href="#common-exam-scenarios" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Implementing layered security for SOHO networks</li>
+<li>Configuring Windows security settings for business use</li>
+<li>Following malware removal procedures step-by-step</li>
+<li>Selecting appropriate data destruction methods</li>
+<li>Securing mobile devices in enterprise environments</li>
+</ul>
+<h3 id="security-principles-to-remember">Security Principles to Remember:<a class="headerlink" href="#security-principles-to-remember" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Defense in Depth</strong> - Multiple layers of security</li>
+<li><strong>Least Privilege</strong> - Minimum necessary access</li>
+<li><strong>Zero Trust</strong> - Never trust, always verify</li>
+<li><strong>Security vs Usability</strong> - Balance protection with productivity</li>
+</ul>
+<h3 id="memorization-aids">Memorization Aids:<a class="headerlink" href="#memorization-aids" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Malware Removal:</strong> "Investigate, Quarantine, Disable, Remediate, Update, Scan, Reimage, Schedule, Enable, Educate"</li>
+<li><strong>MFA Factors:</strong> "Something you know, have, or are"</li>
+<li><strong>Wireless Security:</strong> "WPA3 &gt; WPA2 &gt; WEP (never use)"</li>
+</ul>
+<h3 id="hands-on-practice">Hands-On Practice:<a class="headerlink" href="#hands-on-practice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Configure Windows security settings (BitLocker, UAC, firewall)</li>
+<li>Practice malware removal in safe environment</li>
+<li>Set up SOHO network with proper security</li>
+<li>Configure browser security settings</li>
+<li>Implement mobile device security policies</li>
+</ul>
+<h3 id="key-technology-trends">Key Technology Trends:<a class="headerlink" href="#key-technology-trends" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Zero Trust Architecture</strong> - Verify everything, trust nothing</li>
+<li><strong>SASE</strong> - Secure Access Service Edge</li>
+<li><strong>XDR</strong> - Extended Detection and Response</li>
+<li><strong>Passwordless Authentication</strong> - Moving beyond traditional passwords</li>
+</ul>
+<hr />
+<p><em>Weight: 28% of Core 2 Exam | Estimated Study Time: 35-40 hours</em></p>
+<p><strong>Note:</strong> Security is tied for the largest domain on Core 2 with Operating Systems. This material integrates heavily with other domains, especially when configuring OS security features and troubleshooting security issues. Focus on practical implementation rather than just theoretical knowledge.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../1.0-operating-systems-overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1.0 Operating Systems">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                1.0 Operating Systems
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../3.0-software-troubleshooting-overview/" class="md-footer__link md-footer__link--next" aria-label="Next: 3.0 Software Troubleshooting">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                3.0 Software Troubleshooting
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../js/print-button.js"></script>
+      
+    
+  </body>
+</html>

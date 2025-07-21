@@ -1,0 +1,1382 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../hardware/">
+      
+      
+        <link rel="next" href="../troubleshooting/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>4.0 Virtualization - CompTIA A+ Study Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-button.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#40-virtualization-and-cloud-computing-11-of-core-1-exam" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CompTIA A+ Study Guide" class="md-header__button md-logo" aria-label="CompTIA A+ Study Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CompTIA A+ Study Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4.0 Virtualization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.55 19.09 1.41 1.41 1.8-1.79-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71 1.8 1.79 1.41-1.41-1.79-1.8M20.45 5l-1.41-1.4-1.8 1.79 1.42 1.42M13 1h-2v3h2M6.76 5.39 4.96 3.6 3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-objectives/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exam Objectives
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1.0-mobile-devices/" class="md-tabs__link">
+          
+  
+  
+  Core 1
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../core2/1.0-operating-systems-overview/" class="md-tabs__link">
+          
+  
+  
+  Core 2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CompTIA A+ Study Guide" class="md-nav__button md-logo" aria-label="CompTIA A+ Study Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CompTIA A+ Study Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam Objectives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    1.0 Mobile Devices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            1.0 Mobile Devices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.1-laptop-hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Laptop Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.2-connecting-mobile-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connecting Devices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.2-mobile-device-accessories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.3-mobile-device-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobile Device Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.3-mobile-device-networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobile Networks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Networking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    4.0 Virtualization
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0 Virtualization
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-virtualization-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Virtualization Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Virtualization Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of Virtual Machines:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtualization-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtualization Requirements:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desktop-virtualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desktop Virtualization:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container Technology:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hypervisor-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypervisor Types:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-cloud-computing-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Cloud Computing Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Cloud Computing Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-cloud-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Cloud Models:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-service-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Service Models:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-tips-for-virtualization-and-cloud-computing-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Study Tips for Virtualization and Cloud Computing Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Study Tips for Virtualization and Cloud Computing Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-priority-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Priority Topics:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-exam-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Exam Scenarios:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-comparisons-to-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Comparisons to Master:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Applications:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#study-memory-aids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Study Memory Aids:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on-practice-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands-On Practice Recommendations:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-trends-to-understand" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Trends to Understand:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost Considerations:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.0 Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Core 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core2/1.0-operating-systems-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 Operating Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core2/2.0-security-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core2/3.0-software-troubleshooting-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Software Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="40-virtualization-and-cloud-computing-11-of-core-1-exam">4.0 Virtualization and Cloud Computing (11% of Core 1 Exam)<a class="headerlink" href="#40-virtualization-and-cloud-computing-11-of-core-1-exam" title="Permanent link">&para;</a></h1>
+<p><em>Focus: Understanding virtual machine purposes, requirements, hypervisor types, cloud service models, and cloud characteristics for modern IT environments</em></p>
+<hr />
+<h2 id="41-virtualization-concepts">4.1 Virtualization Concepts<a class="headerlink" href="#41-virtualization-concepts" title="Permanent link">&para;</a></h2>
+<p><strong>Explanation Focus:</strong> You'll need to understand why virtualization is used, what resources virtual machines require, and the different types of virtualization technologies available.</p>
+<h3 id="purpose-of-virtual-machines">Purpose of Virtual Machines:<a class="headerlink" href="#purpose-of-virtual-machines" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sandbox Environment</strong> - Isolated testing without affecting host system</li>
+<li><strong>Test Development</strong> - Safe environment for software development and testing</li>
+<li><strong>Application Virtualization</strong> - Run applications without installing on host OS<ul>
+<li><strong>Legacy Software/OS</strong> - Run older applications on modern hardware</li>
+<li><strong>Cross-Platform Virtualization</strong> - Run different OS applications simultaneously</li>
+</ul>
+</li>
+</ul>
+<h3 id="virtualization-requirements">Virtualization Requirements:<a class="headerlink" href="#virtualization-requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Security</strong> - Isolation between VMs and host system</li>
+<li><strong>Network</strong> - Virtual switches and network segmentation</li>
+<li><strong>Storage</strong> - Virtual disks and shared storage resources</li>
+</ul>
+<h3 id="desktop-virtualization">Desktop Virtualization:<a class="headerlink" href="#desktop-virtualization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>VDI (Virtual Desktop Infrastructure)</strong> - Centralized desktop management<ul>
+<li>Users access virtual desktops from thin clients</li>
+<li>Centralized updates and security management</li>
+<li>Reduced hardware costs at endpoints</li>
+</ul>
+</li>
+</ul>
+<h3 id="container-technology">Container Technology:<a class="headerlink" href="#container-technology" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Containers</strong> - Lightweight application packaging<ul>
+<li>Share host OS kernel (unlike full VMs)</li>
+<li>Faster startup and lower resource usage</li>
+<li>Popular with microservices architecture</li>
+</ul>
+</li>
+</ul>
+<h3 id="hypervisor-types">Hypervisor Types:<a class="headerlink" href="#hypervisor-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Type 1 (Bare Metal)</strong><ul>
+<li>Runs directly on hardware</li>
+<li>Better performance and security</li>
+<li>Examples: VMware vSphere, Microsoft Hyper-V Server</li>
+<li>Used in enterprise data centers</li>
+</ul>
+</li>
+<li><strong>Type 2 (Hosted)</strong><ul>
+<li>Runs on top of existing operating system</li>
+<li>Easier to install and manage</li>
+<li>Examples: VMware Workstation, VirtualBox</li>
+<li>Used for development and testing</li>
+</ul>
+</li>
+</ul>
+<p><em>Key Study Point: Type 1 hypervisors offer better performance for production environments, while Type 2 are better for development. Understand that containers share the host kernel while VMs include complete operating systems.</em></p>
+<hr />
+<h2 id="42-cloud-computing-concepts">4.2 Cloud Computing Concepts<a class="headerlink" href="#42-cloud-computing-concepts" title="Permanent link">&para;</a></h2>
+<p><strong>Summary Focus:</strong> You'll compare different cloud deployment models and service types while understanding the key characteristics that define cloud computing.</p>
+<h3 id="common-cloud-models">Common Cloud Models:<a class="headerlink" href="#common-cloud-models" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Private Cloud</strong> - Dedicated to single organization<ul>
+<li>Maximum control and security</li>
+<li>Higher costs and complexity</li>
+<li>On-premises or hosted privately</li>
+</ul>
+</li>
+<li><strong>Public Cloud</strong> - Shared infrastructure for multiple customers<ul>
+<li>Lower costs through shared resources</li>
+<li>Less control over security and compliance</li>
+<li>Examples: AWS, Microsoft Azure, Google Cloud</li>
+</ul>
+</li>
+<li><strong>Hybrid Cloud</strong> - Combination of private and public<ul>
+<li>Sensitive data in private, general workloads in public</li>
+<li>Flexibility to move workloads as needed</li>
+<li>Complex integration and management</li>
+</ul>
+</li>
+<li><strong>Community Cloud</strong> - Shared among organizations with common requirements<ul>
+<li>Government agencies, healthcare organizations</li>
+<li>Shared costs while maintaining compliance</li>
+</ul>
+</li>
+</ul>
+<h3 id="cloud-service-models">Cloud Service Models:<a class="headerlink" href="#cloud-service-models" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>IaaS (Infrastructure as a Service)</strong><ul>
+<li>Virtual machines, storage, networking</li>
+<li>Customer manages OS, applications, data</li>
+<li>Examples: Amazon EC2, Azure Virtual Machines</li>
+</ul>
+</li>
+<li><strong>SaaS (Software as a Service)</strong><ul>
+<li>Complete applications delivered over internet</li>
+<li>No customer maintenance required</li>
+<li>Examples: Office 365, Salesforce, Gmail</li>
+</ul>
+</li>
+<li><strong>PaaS (Platform as a Service)</strong><ul>
+<li>Development platform without infrastructure management</li>
+<li>Focus on application development</li>
+<li>Examples: Azure App Service, Google App Engine</li>
+</ul>
+</li>
+</ul>
+<h3 id="cloud-characteristics">Cloud Characteristics:<a class="headerlink" href="#cloud-characteristics" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Shared vs Dedicated Resources</strong><ul>
+<li><strong>Shared</strong> - Multiple customers on same hardware (lower cost)</li>
+<li><strong>Dedicated</strong> - Exclusive hardware access (higher performance/security)</li>
+</ul>
+</li>
+<li><strong>Metered Utilization</strong> - Pay-per-use billing model<ul>
+<li><strong>Ingress/Egress</strong> - Data transfer in/out of cloud</li>
+<li>Bandwidth, storage, compute time charges</li>
+</ul>
+</li>
+<li><strong>Elasticity</strong> - Automatic scaling based on demand<ul>
+<li>Scale up during high usage periods</li>
+<li>Scale down to reduce costs during low usage</li>
+</ul>
+</li>
+<li><strong>Availability</strong> - High uptime through redundancy<ul>
+<li>Multiple data centers and failover capabilities</li>
+<li>Service Level Agreements (SLAs) guarantee uptime</li>
+</ul>
+</li>
+<li><strong>File Synchronization</strong> - Keep files updated across devices<ul>
+<li>Automatic backup and version control</li>
+<li>Access from anywhere with internet connection</li>
+</ul>
+</li>
+<li><strong>Multitenancy</strong> - Multiple customers sharing infrastructure<ul>
+<li>Logical separation maintains security and privacy</li>
+<li>Cost efficiencies through resource sharing</li>
+</ul>
+</li>
+</ul>
+<p><em>Key Study Point: Understand the trade-offs between cloud models - public is cheapest but least secure, private is most secure but most expensive. Know the responsibility boundaries for each service model (IaaS = you manage more, SaaS = provider manages everything).</em></p>
+<hr />
+<h2 id="study-tips-for-virtualization-and-cloud-computing-domain">Study Tips for Virtualization and Cloud Computing Domain<a class="headerlink" href="#study-tips-for-virtualization-and-cloud-computing-domain" title="Permanent link">&para;</a></h2>
+<h3 id="high-priority-topics">High-Priority Topics:<a class="headerlink" href="#high-priority-topics" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Hypervisor Type 1 vs Type 2 differences and use cases</li>
+<li>Cloud service models (IaaS, PaaS, SaaS) and what each includes</li>
+<li>Virtual machine resource requirements and security considerations</li>
+<li>Cloud deployment models and their appropriate use cases</li>
+</ul>
+<h3 id="common-exam-scenarios">Common Exam Scenarios:<a class="headerlink" href="#common-exam-scenarios" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Choosing appropriate hypervisor type for given requirements</li>
+<li>Determining which cloud service model fits specific business needs</li>
+<li>Understanding when to use containers vs full virtual machines</li>
+<li>Calculating cloud costs based on metered utilization</li>
+</ul>
+<h3 id="key-comparisons-to-master">Key Comparisons to Master:<a class="headerlink" href="#key-comparisons-to-master" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>VMs vs Containers:</strong> VMs include full OS, containers share host kernel</li>
+<li><strong>Type 1 vs Type 2:</strong> Direct hardware vs hosted on OS</li>
+<li><strong>Public vs Private vs Hybrid:</strong> Cost vs control vs flexibility</li>
+<li><strong>IaaS vs PaaS vs SaaS:</strong> How much you manage vs provider manages</li>
+</ul>
+<h3 id="real-world-applications">Real-World Applications:<a class="headerlink" href="#real-world-applications" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Development Teams:</strong> Type 2 hypervisors for testing different OS configurations</li>
+<li><strong>Enterprise Production:</strong> Type 1 hypervisors for server consolidation</li>
+<li><strong>Remote Workers:</strong> VDI for centralized desktop management</li>
+<li><strong>Startups:</strong> Public cloud SaaS to minimize IT overhead</li>
+<li><strong>Regulated Industries:</strong> Private or hybrid cloud for compliance requirements</li>
+</ul>
+<h3 id="study-memory-aids">Study Memory Aids:<a class="headerlink" href="#study-memory-aids" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cloud Models:</strong> "Public = Cheap &amp; Shared, Private = Secure &amp; Expensive, Hybrid = Best of Both"</li>
+<li><strong>Service Models:</strong> "IaaS = Infrastructure, PaaS = Platform, SaaS = Software"</li>
+<li><strong>Hypervisors:</strong> "Type 1 = Direct (Bare Metal), Type 2 = Hosted (On OS)"</li>
+<li><strong>Container Benefits:</strong> "Lighter, Faster, More Efficient than VMs"</li>
+</ul>
+<h3 id="hands-on-practice-recommendations">Hands-On Practice Recommendations:<a class="headerlink" href="#hands-on-practice-recommendations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Install VirtualBox or VMware Workstation (Type 2 hypervisor)</li>
+<li>Create virtual machines with different operating systems</li>
+<li>Experiment with container technology (Docker Desktop)</li>
+<li>Sign up for free cloud accounts (AWS, Azure, Google Cloud)</li>
+<li>Practice file synchronization with cloud storage services</li>
+<li>Configure VDI in a lab environment</li>
+</ul>
+<h3 id="important-trends-to-understand">Important Trends to Understand:<a class="headerlink" href="#important-trends-to-understand" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Edge Computing:</strong> Moving processing closer to data sources</li>
+<li><strong>Serverless Computing:</strong> Function-as-a-Service (FaaS) model</li>
+<li><strong>Multi-Cloud Strategy:</strong> Using multiple cloud providers</li>
+<li><strong>Cloud-Native Applications:</strong> Designed specifically for cloud environments</li>
+</ul>
+<h3 id="cost-considerations">Cost Considerations:<a class="headerlink" href="#cost-considerations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Capital vs Operational Expenses:</strong> Cloud shifts from CapEx to OpEx</li>
+<li><strong>Pay-as-you-go:</strong> Only pay for resources actually used</li>
+<li><strong>Reserved Instances:</strong> Lower costs for predictable workloads</li>
+<li><strong>Data Transfer Costs:</strong> Egress charges can be significant</li>
+</ul>
+<hr />
+<p><em>Weight: 11% of Core 1 Exam | Estimated Study Time: 12-15 hours</em></p>
+<p><strong>Note:</strong> While this domain has the smallest weight on the exam, virtualization and cloud concepts are fundamental to modern IT infrastructure. Many questions in other domains may also reference virtual environments and cloud services, making this knowledge valuable across the entire exam.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../hardware/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3.0 Hardware">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                3.0 Hardware
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../troubleshooting/" class="md-footer__link md-footer__link--next" aria-label="Next: 5.0 Troubleshooting">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                5.0 Troubleshooting
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../js/print-button.js"></script>
+      
+    
+  </body>
+</html>

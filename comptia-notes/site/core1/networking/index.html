@@ -1,0 +1,1542 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1.0-mobile-devices/1.3-mobile-device-networks/">
+      
+      
+        <link rel="next" href="../hardware/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>2.0 Networking - CompTIA A+ Study Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-button.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#20-networking-23-of-core-1-exam" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CompTIA A+ Study Guide" class="md-header__button md-logo" aria-label="CompTIA A+ Study Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CompTIA A+ Study Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2.0 Networking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.55 19.09 1.41 1.41 1.8-1.79-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71 1.8 1.79 1.41-1.41-1.79-1.8M20.45 5l-1.41-1.4-1.8 1.79 1.42 1.42M13 1h-2v3h2M6.76 5.39 4.96 3.6 3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-objectives/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exam Objectives
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1.0-mobile-devices/" class="md-tabs__link">
+          
+  
+  
+  Core 1
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../core2/1.0-operating-systems-overview/" class="md-tabs__link">
+          
+  
+  
+  Core 2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CompTIA A+ Study Guide" class="md-nav__button md-logo" aria-label="CompTIA A+ Study Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CompTIA A+ Study Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam Objectives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    1.0 Mobile Devices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            1.0 Mobile Devices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.1-laptop-hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Laptop Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.2-connecting-mobile-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connecting Devices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.2-mobile-device-accessories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.3-mobile-device-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobile Device Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0-mobile-devices/1.3-mobile-device-networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobile Networks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    2.0 Networking
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Networking
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-tcp-and-udp-ports-protocols-and-purposes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 TCP and UDP Ports, Protocols, and Purposes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 TCP and UDP Ports, Protocols, and Purposes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-ports-and-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Ports and Protocols:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-vs-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP vs UDP:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-wireless-networking-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Wireless Networking Technologies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Wireless Networking Technologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wireless-frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wireless Frequencies:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Channel Management:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wireless-standards-and-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wireless Standards and Technologies:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-networked-host-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Networked Host Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Networked Host Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Roles:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet-appliances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet Appliances:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specialized-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specialized Systems:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-network-configuration-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Network Configuration Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Network Configuration Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-record-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS Record Types:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      DHCP Configuration:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Segmentation:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-networking-hardware-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Networking Hardware Devices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Networking Hardware Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-network-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Network Devices:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-and-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power and Connectivity:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet-connection-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet Connection Devices:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-soho-network-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 SOHO Network Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 SOHO Network Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-addressing-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP Addressing Concepts:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-internet-connection-types-and-network-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 Internet Connection Types and Network Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 Internet Connection Types and Network Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internet-connection-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet Connection Types:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-type-classifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Type Classifications:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-networking-tools-and-purposes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 Networking Tools and Purposes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8 Networking Tools and Purposes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cable-installation-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cable Installation Tools:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-testing-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Testing Tools:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-tips-for-networking-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Study Tips for Networking Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Study Tips for Networking Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-priority-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Priority Topics:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-exam-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Exam Scenarios:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands-On Practice:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0 Virtualization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.0 Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Core 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core2/1.0-operating-systems-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 Operating Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core2/2.0-security-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core2/3.0-software-troubleshooting-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Software Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="20-networking-23-of-core-1-exam">2.0 Networking (23% of Core 1 Exam)<a class="headerlink" href="#20-networking-23-of-core-1-exam" title="Permanent link">&para;</a></h1>
+<p><em>Focus: Understanding network protocols, wireless technologies, network services, configuration concepts, hardware devices, SOHO networks, connection types, and network tools</em></p>
+<hr />
+<h2 id="21-tcp-and-udp-ports-protocols-and-purposes">2.1 TCP and UDP Ports, Protocols, and Purposes<a class="headerlink" href="#21-tcp-and-udp-ports-protocols-and-purposes" title="Permanent link">&para;</a></h2>
+<p><strong>Comparison Focus:</strong> You'll need to identify common port numbers, distinguish between TCP and UDP protocols, and understand when each protocol is used.</p>
+<h3 id="essential-ports-and-protocols">Essential Ports and Protocols:<a class="headerlink" href="#essential-ports-and-protocols" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>FTP (20-21)</strong> - File Transfer Protocol for file transfers</li>
+<li><strong>SSH (22)</strong> - Secure Shell for encrypted remote access</li>
+<li><strong>Telnet (23)</strong> - Unencrypted remote terminal access</li>
+<li><strong>SMTP (25)</strong> - Simple Mail Transfer Protocol for sending email</li>
+<li><strong>DNS (53)</strong> - Domain Name System for name resolution</li>
+<li><strong>DHCP (67/68)</strong> - Dynamic Host Configuration Protocol for IP addressing</li>
+<li><strong>HTTP (80)</strong> - Hypertext Transfer Protocol for web traffic</li>
+<li><strong>POP3 (110)</strong> - Post Office Protocol 3 for email retrieval</li>
+<li><strong>NetBIOS (137-139)</strong> - Network Basic Input/Output System</li>
+<li><strong>IMAP (143)</strong> - Internet Mail Access Protocol for email access</li>
+<li><strong>LDAP (389)</strong> - Lightweight Directory Access Protocol</li>
+<li><strong>HTTPS (443)</strong> - HTTP Secure for encrypted web traffic</li>
+<li><strong>SMB/CIFS (445)</strong> - Server Message Block for file sharing</li>
+<li><strong>RDP (3389)</strong> - Remote Desktop Protocol for Windows remote access</li>
+</ul>
+<h3 id="tcp-vs-udp">TCP vs UDP:<a class="headerlink" href="#tcp-vs-udp" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>TCP</strong> - Reliable, connection-oriented, error checking</li>
+<li><strong>UDP</strong> - Fast, connectionless, no error checking</li>
+</ul>
+<p><em>Key Study Point: Memorize the most common ports (22, 23, 25, 53, 80, 110, 143, 443) and understand whether each service requires reliable delivery (TCP) or speed (UDP).</em></p>
+<hr />
+<h2 id="22-wireless-networking-technologies">2.2 Wireless Networking Technologies<a class="headerlink" href="#22-wireless-networking-technologies" title="Permanent link">&para;</a></h2>
+<p><strong>Explanation Focus:</strong> You'll compare different wireless technologies and understand their appropriate use cases and limitations.</p>
+<h3 id="wireless-frequencies">Wireless Frequencies:<a class="headerlink" href="#wireless-frequencies" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>2.4GHz</strong> - Longer range, more interference, slower speeds</li>
+<li><strong>5GHz</strong> - Shorter range, less interference, faster speeds</li>
+<li><strong>6GHz</strong> - Newest band, highest speeds, shortest range</li>
+</ul>
+<h3 id="channel-management">Channel Management:<a class="headerlink" href="#channel-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Regulations</strong> - Government restrictions on frequency use</li>
+<li><strong>Channel Selection</strong> - Avoiding interference through proper planning</li>
+<li><strong>Channel Widths</strong> - 20MHz, 40MHz, 80MHz, 160MHz options</li>
+<li><strong>Frequency Bands</strong> - ISM band usage and restrictions</li>
+</ul>
+<h3 id="wireless-standards-and-technologies">Wireless Standards and Technologies:<a class="headerlink" href="#wireless-standards-and-technologies" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>802.11 Standards</strong> - Wi-Fi protocol evolution (a/b/g/n/ac/ax)</li>
+<li><strong>Bluetooth</strong> - Short-range personal area networking</li>
+<li><strong>NFC</strong> - Near Field Communication for proximity data transfer</li>
+<li><strong>RFID</strong> - Radio Frequency Identification for asset tracking</li>
+</ul>
+<p><em>Key Study Point: Understand the trade-offs between range, speed, and interference across different frequencies and when to use each wireless technology.</em></p>
+<hr />
+<h2 id="23-networked-host-services">2.3 Networked Host Services<a class="headerlink" href="#23-networked-host-services" title="Permanent link">&para;</a></h2>
+<p><strong>Summary Focus:</strong> You'll identify various server roles and network appliances, understanding their functions in enterprise environments.</p>
+<h3 id="server-roles">Server Roles:<a class="headerlink" href="#server-roles" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>DNS</strong> - Domain name resolution services</li>
+<li><strong>DHCP</strong> - Automatic IP address assignment</li>
+<li><strong>File Share</strong> - Centralized file storage and access</li>
+<li><strong>Print Servers</strong> - Network printing management</li>
+<li><strong>Mail Servers</strong> - Email processing and delivery</li>
+<li><strong>Web Servers</strong> - HTTP/HTTPS content delivery</li>
+<li><strong>Syslog</strong> - Centralized logging and monitoring</li>
+<li><strong>AAA</strong> - Authentication, Authorization, and Accounting</li>
+<li><strong>Database Servers</strong> - Data storage and retrieval</li>
+<li><strong>NTP</strong> - Network Time Protocol for time synchronization</li>
+</ul>
+<h3 id="internet-appliances">Internet Appliances:<a class="headerlink" href="#internet-appliances" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Spam Gateways</strong> - Email filtering and protection</li>
+<li><strong>UTM</strong> - Unified Threat Management for security</li>
+<li><strong>Load Balancers</strong> - Traffic distribution across servers</li>
+<li><strong>Proxy Servers</strong> - Content filtering and caching</li>
+</ul>
+<h3 id="specialized-systems">Specialized Systems:<a class="headerlink" href="#specialized-systems" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SCADA</strong> - Supervisory Control and Data Acquisition for industrial systems</li>
+<li><strong>IoT Devices</strong> - Internet of Things connected devices</li>
+</ul>
+<p><em>Key Study Point: Match each service type to its primary function and understand how they work together in network infrastructure.</em></p>
+<hr />
+<h2 id="24-network-configuration-concepts">2.4 Network Configuration Concepts<a class="headerlink" href="#24-network-configuration-concepts" title="Permanent link">&para;</a></h2>
+<p><strong>Explanation Focus:</strong> You'll configure DNS records, DHCP settings, VLANs, and VPNs while understanding their security and operational implications.</p>
+<h3 id="dns-record-types">DNS Record Types:<a class="headerlink" href="#dns-record-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>A Records</strong> - Map hostnames to IPv4 addresses</li>
+<li><strong>AAAA Records</strong> - Map hostnames to IPv6 addresses</li>
+<li><strong>CNAME</strong> - Canonical name aliases</li>
+<li><strong>MX Records</strong> - Mail exchanger routing</li>
+<li><strong>TXT Records</strong> - Text data for various purposes<ul>
+<li><strong>DKIM</strong> - DomainKeys Identified Mail</li>
+<li><strong>SPF</strong> - Sender Policy Framework</li>
+<li><strong>DMARC</strong> - Domain-based Message Authentication</li>
+</ul>
+</li>
+</ul>
+<h3 id="dhcp-configuration">DHCP Configuration:<a class="headerlink" href="#dhcp-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Leases</strong> - Temporary IP address assignments</li>
+<li><strong>Reservations</strong> - Permanent IP assignments for specific devices</li>
+<li><strong>Scope</strong> - Range of available IP addresses</li>
+<li><strong>Exclusions</strong> - IP addresses removed from automatic assignment</li>
+</ul>
+<h3 id="network-segmentation">Network Segmentation:<a class="headerlink" href="#network-segmentation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>VLANs</strong> - Virtual LANs for logical network separation</li>
+<li><strong>VPNs</strong> - Virtual Private Networks for secure remote access</li>
+</ul>
+<p><em>Key Study Point: Understand how DNS and DHCP work together to provide seamless network connectivity and how VLANs provide security through network segmentation.</em></p>
+<hr />
+<h2 id="25-networking-hardware-devices">2.5 Networking Hardware Devices<a class="headerlink" href="#25-networking-hardware-devices" title="Permanent link">&para;</a></h2>
+<p><strong>Comparison Focus:</strong> You'll select appropriate network devices based on requirements and understand their specific functions and capabilities.</p>
+<h3 id="core-network-devices">Core Network Devices:<a class="headerlink" href="#core-network-devices" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Routers</strong> - Route traffic between different networks</li>
+<li><strong>Switches</strong><ul>
+<li><strong>Managed</strong> - Configurable VLANs, QoS, monitoring</li>
+<li><strong>Unmanaged</strong> - Basic switching, plug-and-play</li>
+</ul>
+</li>
+<li><strong>Access Points</strong> - Provide wireless network connectivity</li>
+<li><strong>Patch Panels</strong> - Organize and manage cable connections</li>
+<li><strong>Firewalls</strong> - Control network traffic based on security rules</li>
+</ul>
+<h3 id="power-and-connectivity">Power and Connectivity:<a class="headerlink" href="#power-and-connectivity" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Power over Ethernet (PoE)</strong><ul>
+<li><strong>Injectors</strong> - Add PoE to non-PoE switches</li>
+<li><strong>PoE Switches</strong> - Built-in power delivery</li>
+<li><strong>PoE Standards</strong> - 802.3af, 802.3at, 802.3bt power levels</li>
+</ul>
+</li>
+</ul>
+<h3 id="internet-connection-devices">Internet Connection Devices:<a class="headerlink" href="#internet-connection-devices" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cable Modem</strong> - Cable internet connectivity</li>
+<li><strong>DSL Modem</strong> - Digital Subscriber Line connectivity</li>
+<li><strong>ONT</strong> - Optical Network Terminal for fiber connections</li>
+<li><strong>NIC</strong> - Network Interface Card with unique MAC address</li>
+</ul>
+<p><em>Key Study Point: Know when to use managed vs unmanaged switches and understand PoE power requirements for different devices.</em></p>
+<hr />
+<h2 id="26-soho-network-configuration">2.6 SOHO Network Configuration<a class="headerlink" href="#26-soho-network-configuration" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario Focus:</strong> You'll configure small office/home office networks including IP addressing schemes and basic routing.</p>
+<h3 id="ip-addressing-concepts">IP Addressing Concepts:<a class="headerlink" href="#ip-addressing-concepts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>IPv4 Private Addresses</strong> - 10.x.x.x, 172.16-31.x.x, 192.168.x.x</li>
+<li><strong>IPv4 Public Addresses</strong> - Internet-routable addresses</li>
+<li><strong>IPv6</strong> - Next-generation addressing with 128-bit addresses</li>
+<li><strong>APIPA</strong> - Automatic Private IP Addressing (169.254.x.x)</li>
+<li><strong>Static vs Dynamic</strong> - Manual vs DHCP address assignment</li>
+<li><strong>Subnet Mask</strong> - Defines network and host portions</li>
+<li><strong>Gateway</strong> - Default route for external network access</li>
+</ul>
+<p><em>Key Study Point: Memorize the private IP address ranges and understand the difference between static and dynamic addressing in SOHO environments.</em></p>
+<hr />
+<h2 id="27-internet-connection-types-and-network-types">2.7 Internet Connection Types and Network Types<a class="headerlink" href="#27-internet-connection-types-and-network-types" title="Permanent link">&para;</a></h2>
+<p><strong>Comparison Focus:</strong> You'll evaluate different internet connection options and network topologies based on speed, cost, and availability requirements.</p>
+<h3 id="internet-connection-types">Internet Connection Types:<a class="headerlink" href="#internet-connection-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Satellite</strong> - Rural areas, high latency, weather dependent</li>
+<li><strong>Fiber</strong> - Highest speeds, best reliability, limited availability</li>
+<li><strong>Cable</strong> - Fast download, shared bandwidth, widely available</li>
+<li><strong>DSL</strong> - Uses phone lines, distance dependent, moderate speeds</li>
+<li><strong>Cellular</strong> - Mobile connectivity, data caps, variable coverage</li>
+<li><strong>WISP</strong> - Wireless Internet Service Provider for rural areas</li>
+</ul>
+<h3 id="network-type-classifications">Network Type Classifications:<a class="headerlink" href="#network-type-classifications" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>LAN</strong> - Local Area Network (building/campus)</li>
+<li><strong>WAN</strong> - Wide Area Network (geographically dispersed)</li>
+<li><strong>PAN</strong> - Personal Area Network (individual workspace)</li>
+<li><strong>MAN</strong> - Metropolitan Area Network (city-wide)</li>
+<li><strong>SAN</strong> - Storage Area Network (high-speed storage)</li>
+<li><strong>WLAN</strong> - Wireless LAN implementation</li>
+</ul>
+<p><em>Key Study Point: Match connection types to appropriate use cases based on geography, speed requirements, and budget constraints.</em></p>
+<hr />
+<h2 id="28-networking-tools-and-purposes">2.8 Networking Tools and Purposes<a class="headerlink" href="#28-networking-tools-and-purposes" title="Permanent link">&para;</a></h2>
+<p><strong>Explanation Focus:</strong> You'll identify the correct tools for specific network installation, maintenance, and troubleshooting tasks.</p>
+<h3 id="cable-installation-tools">Cable Installation Tools:<a class="headerlink" href="#cable-installation-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Crimper</strong> - Attach connectors to network cables</li>
+<li><strong>Cable Stripper</strong> - Remove cable jacket and insulation</li>
+<li><strong>Punchdown Tool</strong> - Terminate cables in patch panels/jacks</li>
+</ul>
+<h3 id="network-testing-tools">Network Testing Tools:<a class="headerlink" href="#network-testing-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cable Tester</strong> - Verify cable continuity and wiring</li>
+<li><strong>Loopback Plug</strong> - Test network port functionality</li>
+<li><strong>Toner Probe</strong> - Trace cables through walls/conduits</li>
+<li><strong>Wi-Fi Analyzer</strong> - Analyze wireless signal strength and interference</li>
+<li><strong>Network Tap</strong> - Monitor network traffic for analysis</li>
+</ul>
+<p><em>Key Study Point: Know which tool to use for specific scenarios - cable installation vs testing vs troubleshooting wireless issues.</em></p>
+<hr />
+<h2 id="study-tips-for-networking-domain">Study Tips for Networking Domain<a class="headerlink" href="#study-tips-for-networking-domain" title="Permanent link">&para;</a></h2>
+<h3 id="high-priority-topics">High-Priority Topics:<a class="headerlink" href="#high-priority-topics" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Common port numbers and their protocols</li>
+<li>Private vs public IP addressing</li>
+<li>Wireless frequency characteristics (2.4GHz vs 5GHz vs 6GHz)</li>
+<li>DHCP vs static IP configuration</li>
+</ul>
+<h3 id="common-exam-scenarios">Common Exam Scenarios:<a class="headerlink" href="#common-exam-scenarios" title="Permanent link">&para;</a></h3>
+<ul>
+<li>User can't access internal file server (port/protocol issue)</li>
+<li>Wireless connectivity problems (frequency/channel conflicts)</li>
+<li>SOHO network setup with proper IP addressing</li>
+<li>Selecting appropriate internet connection type</li>
+</ul>
+<h3 id="hands-on-practice">Hands-On Practice:<a class="headerlink" href="#hands-on-practice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Configure SOHO router with proper IP schemes</li>
+<li>Use Wi-Fi analyzer to identify optimal channels</li>
+<li>Practice cable termination with crimping tools</li>
+<li>Set up VLANs on managed switches</li>
+</ul>
+<hr />
+<p><em>Weight: 23% of Core 1 Exam | Estimated Study Time: 25-30 hours</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../1.0-mobile-devices/1.3-mobile-device-networks/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mobile Networks">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Mobile Networks
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../hardware/" class="md-footer__link md-footer__link--next" aria-label="Next: 3.0 Hardware">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                3.0 Hardware
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../js/print-button.js"></script>
+      
+    
+  </body>
+</html>
